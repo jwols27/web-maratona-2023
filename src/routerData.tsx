@@ -3,6 +3,7 @@ import ErrorView from './pages/Error/Error.view';
 import {
     ComoParticiparTemplate,
     HomeTemplate,
+    PatrocinadoresTemplate,
     SobreFinalTemplate
 } from './pages/Templates';
 import { ProgramacaoTemplate } from './pages/Templates/Programacao/ProgramacaoTemplate';
@@ -32,16 +33,22 @@ const routerData: IRouterProps[] = [
         element: <SobreFinalTemplate />
     },
 
-    //SOBRE A FINAL
+    //PROGRAMAÇÃO
     {
         path: 'programacao',
         element: <ProgramacaoTemplate />
     },
 
+    //PATROCINADORES
+    {
+        path: 'patrocinadores',
+        element: <PatrocinadoresTemplate />
+    },
+
     //ERROR
     {
         path: '*',
-        element: <ErrorView></ErrorView>
+        element: <ErrorView />
     }
 ];
 

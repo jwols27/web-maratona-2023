@@ -18,7 +18,6 @@ export const FooterContent = () => {
                 bgcolor={'primary.main'}
                 px={{ xs: 4, lg: 8, xl: 16, xxl: 24 }}
                 py={5}
-                spacing={2}
             >
                 <Grid item xs={12} sm={6} md={4}>
                     <Typography
