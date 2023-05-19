@@ -1,0 +1,43 @@
+.bark-image {
+    width: 230px;
+    height: 350px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.bark-main {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.bark-arrow-pos {
+    position: absolute;
+    right: 60px;
+}
+
+.bark-arrow {
+    width: 0;
+    height: 0;
+    margin-top: -2px;
+    position: relative;
+    border-top: 20px solid #81CEEC;
+    border-bottom: 20px solid transparent;
+    border-left: 25px solid transparent;
+    border-right: 25px solid #81CEEC;
+}
+
+.bark-arrow:before {
+    content: "";
+    width: 0;
+    height: 0;
+
+    position: absolute;
+    border-top: solid 18px white;
+    border-bottom: solid 18px transparent;
+    border-left: solid 23px transparent;
+    border-right: solid 23px white;
+    top: -20px;
+    left: -23px;
+}

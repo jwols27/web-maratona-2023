@@ -1,0 +1,56 @@
+.como-participar-time {
+    font-weight: 500 !important;
+}
+
+.como-participar-time a {
+    font-style: italic;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: inherit;
+}
+
+.programacao-box {
+    width: 100%;
+    height: 50%;
+    border-color: inherit;
+}
+
+.prog-main {
+    border-width: 2px;
+    border-style: solid;
+    border-color: inherit;
+}
+
+.prog-1 {
+    width: 100%;
+    border-width: 0 0 2px 0;
+    border-style: solid;
+}
+
+.prog-2 {
+    width: 100%;
+    border-width: 2px 0 0 2px;
+    border-style: solid;
+}
+
+.cronograma-balloon {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: inherit;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1px;
+}
+
+.cronograma-header {
+    border-width: 0 1px 0 1px;
+    border-style: solid;
+    border-color: inherit;
+}
+
+.cronograma-text {
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+    border-color: inherit;
+}
