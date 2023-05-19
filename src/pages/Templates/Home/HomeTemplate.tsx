@@ -2,20 +2,26 @@ import React from 'react';
 import { Box, Grid, useMediaQuery, useTheme } from '@mui/material';
 
 import {
+    CLogoBox,
     CParagraph,
     CTextSlice,
     CTitle,
     FadeInSection
 } from '../../../shared/components';
 import { CronogramaResumido } from './components';
-import logoSBC from '../../../shared/assets/logos/logo-sbc.png';
-import logo45 from '../../../shared/assets/logos/logo-sbc45.png';
-import unoesc from '../../../shared/assets/logos/logo-unoesc-colorida.png';
-import pontoZero from '../../../shared/assets/logos/logo-ponto_zero.png';
+import { logos } from '../data/logos';
+
 export const HomeTemplate = () => {
     const theme = useTheme();
     const mdDown = useMediaQuery(theme.breakpoints.down('md'));
     const smDown = useMediaQuery(theme.breakpoints.down('sm'));
+
+    const responsiveness = React.useMemo(() => {
+        if (smDown) return 'h6';
+        if (mdDown) return 'h4';
+        return 'h3';
+    }, [mdDown, smDown]);
+
     return (
         <div id={'home'}>
             <FadeInSection>
@@ -83,11 +89,7 @@ export const HomeTemplate = () => {
                                 da área têm valorizado os alunos que participam
                                 da Maratona.
                             </CParagraph>
-                            <Box
-                                display={'flex'}
-                                flexDirection={'row'}
-                                width={'100%'}
-                            >
+                            <Box display={'flex'} flexDirection={'row'}>
                                 <CTitle
                                     variant={'h5'}
                                     fontWeight={600}
@@ -105,100 +107,20 @@ export const HomeTemplate = () => {
                                     Organização
                                 </CTitle>
                             </Box>
-                            <Grid
-                                container
-                                direction={'row'}
-                                justifyContent={'start'}
-                            >
-                                <Grid
+                            <Grid container direction={'row'}>
+                                <CLogoBox
                                     xs={5.5}
-                                    item
-                                    container
-                                    alignItems={'center'}
-                                    justifyContent={'center'}
-                                    direction={'column'}
-                                    border={2}
+                                    logos={logos.slice(0, 2)}
                                     borderColor={'tertiary.main'}
-                                    px={4}
-                                >
-                                    <Grid
-                                        xs={12}
-                                        width={'40%'}
-                                        item
-                                        display={'flex'}
-                                    >
-                                        <img
-                                            src={logoSBC}
-                                            alt={'SBC'}
-                                            style={{
-                                                objectFit: 'contain',
-                                                maxWidth: '100%'
-                                            }}
-                                        />
-                                    </Grid>
-                                    <Grid width={'10%'} />
-                                    <Grid
-                                        xs={12}
-                                        width={'40%'}
-                                        item
-                                        display={'flex'}
-                                        justifyContent={'center'}
-                                        alignItems={'center'}
-                                    >
-                                        <img
-                                            src={logo45}
-                                            alt={'SBC 45 anos'}
-                                            style={{
-                                                objectFit: 'contain',
-                                                maxWidth: '100%'
-                                            }}
-                                        />
-                                    </Grid>
-                                </Grid>
-                                <Grid xs={0.5} item />
-                                <Grid
+                                    itemsPerRow={2}
+                                />
+                                <Grid item xs={0.5} />
+                                <CLogoBox
                                     xs={5.5}
-                                    item
-                                    container
-                                    direction={'column'}
-                                    alignItems={'center'}
-                                    justifyContent={'center'}
-                                    border={2}
+                                    logos={logos.slice(2, 4)}
                                     borderColor={'tertiary.main'}
-                                    px={4}
-                                >
-                                    <Grid
-                                        item
-                                        xs={12}
-                                        width={'42%'}
-                                        display={'flex'}
-                                    >
-                                        <img
-                                            src={unoesc}
-                                            alt={'UNOESC'}
-                                            style={{
-                                                objectFit: 'contain',
-                                                maxWidth: '100%'
-                                            }}
-                                        />
-                                    </Grid>
-                                    <Grid width={'10%'} />
-                                    <Grid
-                                        item
-                                        xs={12}
-                                        width={'42%'}
-                                        display={'flex'}
-                                    >
-                                        <img
-                                            src={pontoZero}
-                                            alt={'Ponto Zero'}
-                                            style={{
-                                                objectFit: 'contain',
-                                                maxWidth: '100%'
-                                            }}
-                                        />
-                                    </Grid>
-                                </Grid>
+                                    itemsPerRow={2}
+                                />
                             </Grid>
                         </CTextSlice>
                     </Grid>
@@ -245,7 +167,7 @@ export const HomeTemplate = () => {
                     >
                         <CTitle
                             textTransform={'uppercase'}
-                            variant={mdDown ? (smDown ? 'h6' : 'h4') : 'h3'}
+                            variant={responsiveness}
                             fontWeight={950}
                             titleColor={'primary'}
                             mb={0}

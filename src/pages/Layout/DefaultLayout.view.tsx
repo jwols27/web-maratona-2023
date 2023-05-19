@@ -4,7 +4,7 @@ import { VAppBar, VDrawer, VFooter } from './components';
 import { useLocation } from 'react-router-dom';
 import { navHome, navItems } from './data/NavItems';
 
-import { FooterContent } from './data/FooterContent';
+import { FooterContent } from './components/FooterContent';
 import mainBanner from '../../shared/assets/main-banner.png';
 import { CBanner } from '../../shared/components';
 interface IDefaultLayoutProps {

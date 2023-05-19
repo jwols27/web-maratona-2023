@@ -1,6 +1,8 @@
 import React from 'react';
 import { Grid } from '@mui/material';
 
+import '../styles/thumbnail.css';
+
 export type TLogoBoxImage = {
     src: string;
     alt: string;
@@ -11,6 +13,7 @@ interface ICLogoBoxProps {
     itemsPerRow?: number;
     borderColor?: string;
     borderWidth?: number;
+    enlargeOnHover?: boolean;
     xs?: number;
 }
 
@@ -19,6 +22,7 @@ export const CLogoBox: React.FC<ICLogoBoxProps> = ({
     itemsPerRow = 3,
     borderColor = 'transparent',
     borderWidth = 2,
+    enlargeOnHover,
     xs = 12
 }) => {
     return (
@@ -46,6 +50,7 @@ export const CLogoBox: React.FC<ICLogoBoxProps> = ({
                     <img
                         src={logo.src}
                         alt={logo.alt}
+                        className={enlargeOnHover ? 'thumbnail' : ''}
                         style={{
                             objectFit: 'contain',
                             maxWidth: '100%'
