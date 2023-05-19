@@ -33,7 +33,7 @@ const DefaultLayout: React.FC<IDefaultLayoutProps> = ({ children }) => {
 
     return (
         <Box flex={1}>
-            <VAppBar itens={navItems} handleDrawer={handleDrawer} path={path} />
+            <VAppBar handleDrawer={handleDrawer} path={path} />
             <VDrawer
                 itens={[navHome, ...navItems]}
                 open={open}
