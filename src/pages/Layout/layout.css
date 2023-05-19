@@ -1,0 +1,35 @@
+a:link { text-decoration: none; }
+
+a:visited { text-decoration: none; }
+
+a:hover { text-decoration: none; opacity: .75; }
+
+a:active { text-decoration: none; }
+
+.custom-list {
+    padding: 0 0 0 1rem;
+    margin: 0;
+}
+
+.custom-list li {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: inherit !important;
+}
+
+.nav-item:hover {
+    text-decoration: none;
+    opacity: .75;
+}
+
+.nav-item-drawer-selected {
+    color: white !important;
+}
+
+.Button {
+    color: inherit !important;
+}
