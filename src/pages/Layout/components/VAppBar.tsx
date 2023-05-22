@@ -12,7 +12,8 @@ import {
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
 
-import logo from '../../../shared/assets/logo.png';
+import logoProg from '../../../shared/assets/logos/logo-programacao.png';
+import logoChap from '../../../shared/assets/logos/logo-chapeco.png';
 import '../layout.css';
 import { CSocials } from '../../../shared/components';
 
@@ -20,10 +21,7 @@ interface IVAppBarProps {
     handleDrawer: (b: boolean) => void;
     path: string;
 }
-export const VAppBar: React.FC<IVAppBarProps> = ({
-    handleDrawer,
-    path
-}) => {
+export const VAppBar: React.FC<IVAppBarProps> = ({ handleDrawer, path }) => {
     const theme = useTheme();
     const mdDown = useMediaQuery(theme.breakpoints.down('md'));
     const trigger = useScrollTrigger();
@@ -41,31 +39,52 @@ export const VAppBar: React.FC<IVAppBarProps> = ({
             >
                 <Grid
                     container
-                    height={115}
+                    height={{ xs: 115, md: 175 }}
                     display={'flex'}
                     justifyContent={'start'}
                     alignItems={'center'}
+                    py={4}
                 >
-                    <Grid
-                        item
-                        display={'flex'}
-                        justifyContent={'start'}
-                        alignItems={'center'}
-                        pl={{ xs: 5, md: 10, lg: 15 }}
-                    >
-                        <Tooltip title={'Voltar ao início'} arrow>
-                            <Link to={'/'}>
+                    {!mdDown && (
+                        <>
+                            <Grid
+                                item
+                                pl={{ xs: 5, md: 10, lg: 15 }}
+                                height={'100%'}
+                            >
+                                <Tooltip title={'Voltar ao início'} arrow>
+                                    <Link to={'/'}>
+                                        <img
+                                            src={logoProg}
+                                            style={{
+                                                objectFit: 'contain',
+                                                height: '100%'
+                                            }}
+                                            alt={'Maratona SBC de Programação'}
+                                        ></img>
+                                    </Link>
+                                </Tooltip>
+                            </Grid>
+                            <Grid
+                                item
+                                display={'flex'}
+                                justifyContent={'start'}
+                                alignItems={'center'}
+                                ml={4}
+                                p={0.33}
+                                height={'100%'}
+                            >
                                 <img
-                                    src={logo}
+                                    src={logoChap}
                                     style={{
-                                        objectFit: 'contain'
+                                        objectFit: 'contain',
+                                        height: '100%'
                                     }}
-                                    width={mdDown ? '125px' : '150px'}
                                     alt={'Maratona SBC de Programação'}
                                 ></img>
-                            </Link>
-                        </Tooltip>
-                    </Grid>
+                            </Grid>
+                        </>
+                    )}
                     <Grid
                         item
                         display={'flex'}
