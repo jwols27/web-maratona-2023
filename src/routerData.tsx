@@ -2,6 +2,7 @@ import React from 'react';
 import ErrorView from './pages/Error/Error.view';
 import {
     ComoParticiparTemplate,
+    EquipeColaboradoresTemplate,
     HomeTemplate,
     PatrocinadoresTemplate,
     SobreFinalTemplate
@@ -37,6 +38,12 @@ const routerData: IRouterProps[] = [
     {
         path: 'programacao',
         element: <ProgramacaoTemplate />
+    },
+
+    //EQUIPE E COLABORADORES
+    {
+        path: 'equipe-e-colaboradores',
+        element: <EquipeColaboradoresTemplate />
     },
 
     //PATROCINADORES
