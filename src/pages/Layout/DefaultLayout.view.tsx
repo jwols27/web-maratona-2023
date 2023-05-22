@@ -1,18 +1,23 @@
 import React, { useEffect, useState } from 'react';
-import { Box } from '@mui/material';
+import { Box, useMediaQuery, useTheme } from '@mui/material';
 import { VAppBar, VDrawer, VFooter } from './components';
 import { useLocation } from 'react-router-dom';
-import { navHome, navItems } from './data/NavItems';
 
-import { FooterContent } from './components/FooterContent';
-import mainBanner from '../../shared/assets/main-banner.png';
+import { navHome, navItems } from './data/NavItems';
 import { CBanner } from '../../shared/components';
+import { FooterContent } from './components/FooterContent';
+
+import mainBanner from '../../shared/assets/main-banner.png';
+import smallBanner from '../../shared/assets/small-banner.png';
+
 interface IDefaultLayoutProps {
     children: React.ReactNode;
 }
 
 const DefaultLayout: React.FC<IDefaultLayoutProps> = ({ children }) => {
     const [open, setOpen] = useState<boolean>(false);
+    const theme = useTheme();
+    const mdDown = useMediaQuery(theme.breakpoints.down('md'));
 
     const location = useLocation();
     const path = location.pathname.split('/')[1];
@@ -28,7 +33,7 @@ const DefaultLayout: React.FC<IDefaultLayoutProps> = ({ children }) => {
         });
         document.title = title
             ? `Maratona de Programação | ${title.label}`
-            : 'Maratona de Programação | Maratona SBC de Programação 2023';
+            : 'Maratona SBC de Programação 2023';
     }, [path]);
 
     return (
@@ -42,9 +47,12 @@ const DefaultLayout: React.FC<IDefaultLayoutProps> = ({ children }) => {
             />
 
             {path === '' ? (
-                <CBanner path={mainBanner} alt={'Banner'} />
+                <CBanner
+                    path={mdDown ? smallBanner : mainBanner}
+                    alt={'Banner'}
+                />
             ) : (
-                <Box height={115} bgcolor={path !== '' ? 'primary.dark' : ''} />
+                <Box height={{ xs: 115, md: 175 }} bgcolor={'primary.dark'} />
             )}
 
             <Box

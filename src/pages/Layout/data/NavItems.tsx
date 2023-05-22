@@ -8,7 +8,6 @@ import {
     BsTrophyFill
 } from 'react-icons/bs';
 import { FaCoffee, FaHotel } from 'react-icons/fa';
-import { BiWorld } from 'react-icons/bi';
 import { AiFillHome } from 'react-icons/ai';
 import React from 'react';
 
@@ -44,14 +43,9 @@ export const navItems: TNavItem[] = [
         icon: <BsPeopleFill size={'20'} />
     },
     {
-        label: 'Acomodações',
-        path: 'acomodacoes',
+        label: 'Acomodações e Turismo',
+        path: 'acomodacoes-e-turismo',
         icon: <FaHotel size={'20'} />
-    },
-    {
-        label: 'Turismo em Chapecó',
-        path: 'turismo',
-        icon: <BiWorld size={'20'} />
     },
     {
         label: 'Patrocinadores',
@@ -63,9 +57,4 @@ export const navItems: TNavItem[] = [
         path: 'cafe-com-leite-e-visitantes',
         icon: <FaCoffee size={'20'} />
     }
-    // {
-    //     label: 'Contato',
-    //     path: 'contato',
-    //     icon: <BsTelephoneFill size={'20'} />
-    // }
 ];
