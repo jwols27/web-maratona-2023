@@ -1,20 +1,55 @@
 import React from 'react';
 import { Box, BoxProps, Paper, Tooltip, Typography } from '@mui/material';
 
-interface ICImageSliceProps {
-    image: {
-        src: string;
-        alt: string;
-        label?: {
-            text: React.ReactNode;
-            contrastText?: boolean;
-        };
-        thumbnail?: {
-            enlarge?: boolean;
-            width: string | number;
-            height?: string | number;
-        };
+interface IImageComponentProps {
+    label?: {
+        text: React.ReactNode;
+        contrastText?: boolean;
     };
+    enlarge?: boolean;
+}
+
+const ImageComponent: React.FC<
+    IImageComponentProps & React.ImgHTMLAttributes<HTMLImageElement>
+> = ({ label, enlarge, ...props }) => {
+    return (
+        <>
+            <Tooltip title={props.title} placement={'top'} arrow>
+                <img
+                    src={props.src}
+                    alt={props.alt}
+                    className={enlarge ? 'thumbnail' : ''}
+                    style={{
+                        display: 'flex',
+                        objectFit: 'cover'
+                    }}
+                    {...props}
+                />
+            </Tooltip>
+            {label && (
+                <Box
+                    alignItems={'center'}
+                    justifyContent={'center'}
+                    display={'flex'}
+                    width={'100%'}
+                    mt={enlarge ? 3 : 1}
+                >
+                    <Typography
+                        color={`text${
+                            label.contrastText ? '.secondary' : '.primary'
+                        }`}
+                        variant={'subtitle2'}
+                    >
+                        {label.text}
+                    </Typography>
+                </Box>
+            )}
+        </>
+    );
+};
+
+interface ICImageSliceProps {
+    images: IImageComponentProps & React.ImgHTMLAttributes<HTMLImageElement>[];
 
     mainBoxProps?: BoxProps;
     textBoxProps?: BoxProps;
@@ -28,7 +63,7 @@ interface ICImageSliceProps {
 }
 
 export const CImageSlice: React.FC<ICImageSliceProps> = ({
-    image,
+    images,
     mainBoxProps,
     textBoxProps,
     reversed,
@@ -49,58 +84,24 @@ export const CImageSlice: React.FC<ICImageSliceProps> = ({
             {...mainBoxProps}
         >
             <Box
-                py={image.label ? { xs: 2, md: 4 } : 0}
-                px={image.label ? { xs: 2, md: 0 } : 0}
                 display={'flex'}
-                alignItems={image.thumbnail && 'center'}
-                justifyContent={image.thumbnail && 'center'}
+                alignItems={'center'}
+                justifyContent={'start'}
                 width={{
                     xs: '100%',
                     md: `${(ratio.image / (ratio.text + ratio.image)) * 100}%`
                 }}
+                height={'100%'}
                 flexDirection={'column'}
             >
-                <Tooltip title={image.alt} placement={'top'} arrow>
-                    <img
-                        src={image.src}
-                        alt={image.alt}
-                        className={image.thumbnail?.enlarge ? 'thumbnail' : ''}
-                        style={
-                            image.thumbnail
-                                ? {
-                                      width: image.thumbnail.width,
-                                      height: image.thumbnail.height,
-                                      maxWidth: '100%'
-                                  }
-                                : {
-                                      display: 'flex',
-                                      width: '100%',
-                                      height: '100%',
-                                      objectFit: 'cover'
-                                  }
-                        }
-                    />
-                </Tooltip>
-                {image.label && (
-                    <Box
-                        alignItems={'center'}
-                        justifyContent={'center'}
-                        display={'flex'}
-                        width={'100%'}
-                        mt={image.thumbnail?.enlarge ? 3 : 1}
-                    >
-                        <Typography
-                            color={`text${
-                                image.label.contrastText
-                                    ? '.secondary'
-                                    : '.primary'
-                            }`}
-                            variant={'subtitle2'}
-                        >
-                            {image.label.text}
-                        </Typography>
-                    </Box>
-                )}
+                {images.map((img, index) => {
+                    return (
+                        <>
+                            <ImageComponent key={`image-${index}`} {...img} />
+                            {index !== images.length - 1 && <Box mb={2} />}
+                        </>
+                    );
+                })}
             </Box>
             <Box
                 flexDirection={'column'}

@@ -2,21 +2,16 @@ import React from 'react';
 import { Box, Typography } from '@mui/material';
 
 interface ICBannerProps {
-    path: string;
-    alt: string;
-    height?: number;
+    height?: number | string;
     label?: string;
 }
 
-export const CBanner: React.FC<ICBannerProps> = ({
-    path,
-    alt,
-    height,
-    label
-}) => {
+export const CBanner: React.FC<
+    ICBannerProps & React.ImgHTMLAttributes<HTMLImageElement>
+> = ({ label, ...props }) => {
     return (
         <Box lineHeight={0}>
-            <img src={path} alt={alt} style={{ width: '100%', height }} />
+            <img src={props.src} alt={props.alt} width={'100%'} {...props} />
             {label && (
                 <Box
                     alignItems={'center'}

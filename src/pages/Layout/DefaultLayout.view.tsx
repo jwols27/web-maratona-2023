@@ -48,8 +48,11 @@ const DefaultLayout: React.FC<IDefaultLayoutProps> = ({ children }) => {
 
             {path === '' ? (
                 <CBanner
-                    path={mdDown ? smallBanner : mainBanner}
+                    src={mdDown ? smallBanner : mainBanner}
                     alt={'Banner'}
+                    style={{
+                        height: '100vh'
+                    }}
                 />
             ) : (
                 <Box height={{ xs: 115, md: 175 }} bgcolor={'primary.dark'} />

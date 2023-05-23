@@ -43,7 +43,7 @@ export const navItems: TNavItem[] = [
         icon: <BsPeopleFill size={'20'} />
     },
     {
-        label: 'Acomodações e Turismo',
+        label: 'Acomodações, Turismo',
         path: 'acomodacoes-e-turismo',
         icon: <FaHotel size={'20'} />
     },

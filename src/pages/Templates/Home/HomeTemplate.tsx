@@ -10,6 +10,9 @@ import {
 } from '../../../shared/components';
 import { CronogramaResumido } from './components';
 import { logos } from '../data/logos';
+import { FinalPrincipal } from '../SobreFinal/components/FinalPrincipal';
+
+import './cronograma.css';
 
 export const HomeTemplate = () => {
     const theme = useTheme();
@@ -193,6 +196,9 @@ export const HomeTemplate = () => {
             </FadeInSection>
             <FadeInSection>
                 <CronogramaResumido />
+            </FadeInSection>
+            <FadeInSection>
+                <FinalPrincipal />
             </FadeInSection>
         </div>
     );

@@ -3,7 +3,6 @@ import { Grid, Typography, useTheme } from '@mui/material';
 import { CHeader } from '../../../shared/components';
 
 import '../../../shared/styles/bark-box.css';
-import './como-participar.css';
 import { FormeSeuTime, QuemCoach } from './components';
 
 export const ComoParticiparTemplate = () => {
