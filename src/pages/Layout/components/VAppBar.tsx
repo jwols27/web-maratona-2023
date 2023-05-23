@@ -47,11 +47,7 @@ export const VAppBar: React.FC<IVAppBarProps> = ({ handleDrawer, path }) => {
                 >
                     {!mdDown && (
                         <>
-                            <Grid
-                                item
-                                pl={{ xs: 5, md: 10, lg: 15 }}
-                                height={'100%'}
-                            >
+                            <Grid item ml={{ xs: 10, lg: 15 }} height={'100%'}>
                                 <Tooltip title={'Voltar ao início'} arrow>
                                     <Link to={'/'}>
                                         <img

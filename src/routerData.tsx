@@ -28,6 +28,12 @@ const routerData: IRouterProps[] = [
         element: <ComoParticiparTemplate />
     },
 
+    //MARATONA
+    {
+        path: 'maratona',
+        element: <></>
+    },
+
     //SOBRE A FINAL
     {
         path: 'final',
@@ -46,10 +52,22 @@ const routerData: IRouterProps[] = [
         element: <EquipeColaboradoresTemplate />
     },
 
+    //ACOMODAÇÕES E TURISMO
+    {
+        path: 'acomodacoes-e-turismo',
+        element: <></>
+    },
+
     //PATROCINADORES
     {
         path: 'patrocinadores',
         element: <PatrocinadoresTemplate />
+    },
+
+    //CAFÉ COM LEITE E VISITANTES
+    {
+        path: 'cafe-com-leite-e-visitantes',
+        element: <></>
     },
 
     //ERROR

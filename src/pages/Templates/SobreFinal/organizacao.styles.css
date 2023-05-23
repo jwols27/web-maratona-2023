@@ -1,0 +1,37 @@
+.box-line {
+    border-width: 1px;
+    border-style: solid;
+    border-color: inherit;
+    z-index: -99;
+}
+
+.box-org {
+    border-width:2px;
+    border-style: solid;
+    border-color: inherit;
+    display: flex;
+    margin: auto;
+    padding: 16px
+}
+
+.box-org img {
+    object-fit: contain;
+    max-width: 100%;
+    height: 100%;
+}
+
+.bl-topRight {
+    border-width: 2px 0 0 2px !important;
+}
+
+.bl-topLeft {
+    border-width: 2px 2px 0 0 !important;
+}
+
+.bl-bottomRight {
+    border-width: 0 0 2px 2px !important;
+}
+
+.bl-bottomLeft {
+    border-width: 0 2px 2px 0 !important;
+}
