@@ -14,42 +14,52 @@ import { TLogoBoxImage } from '../../../shared/components';
 export const logos: TLogoBoxImage[] = [
     {
         src: logoSBC,
-        alt: 'Logo SBC'
+        alt: 'Logo SBC',
+        href: 'https://google.com'
     },
     {
         src: logo45,
-        alt: 'Logo SBC 45 anos'
+        alt: 'Logo SBC 45 anos',
+        href: 'https://google.com'
     },
     {
         src: unoesc,
-        alt: 'Logo UNOESC'
+        alt: 'Logo UNOESC',
+        href: 'https://google.com'
     },
     {
         src: pontoZero,
-        alt: 'Logo Ponto Zero'
+        alt: 'Logo Ponto Zero',
+        href: 'https://google.com'
     },
     {
         src: logoAcic,
-        alt: 'Logo ACIC'
+        alt: 'Logo ACIC',
+        href: 'https://google.com'
     },
     {
         src: logoDeatec,
-        alt: 'Logo DEATEC'
+        alt: 'Logo DEATEC',
+        href: 'https://google.com'
     },
     {
         src: LogoPollen,
-        alt: 'Logo pollen'
+        alt: 'Logo pollen',
+        href: 'https://google.com'
     },
     {
         src: logoPrefeitura,
-        alt: 'Logo Prefeitura de Chapecó'
+        alt: 'Logo Prefeitura de Chapecó',
+        href: 'https://google.com'
     },
     {
         src: logoUffs,
-        alt: 'Logo UFFS'
+        alt: 'Logo UFFS',
+        href: 'https://google.com'
     },
     {
         src: logoUnochapeco,
-        alt: 'Logo Unochapecó'
+        alt: 'Logo Unochapecó',
+        href: 'https://google.com'
     }
 ];

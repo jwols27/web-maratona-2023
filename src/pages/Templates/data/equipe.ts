@@ -15,11 +15,11 @@ export const equipe: IPerfilProps[] = [
         nome: 'Lucy Mari Tabuti',
         instituicao: 'Instituto Criativo',
         children: 'Diretora de patrocínios da Maratona SBC de Programação'
-    },
-    {},
-    {},
-    {},
-    {},
-    {},
-    {}
+    }
+    // {},
+    // {},
+    // {},
+    // {},
+    // {},
+    // {}
 ];
