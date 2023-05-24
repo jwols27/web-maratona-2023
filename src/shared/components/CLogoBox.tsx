@@ -6,6 +6,7 @@ import '../styles/thumbnail.css';
 export type TLogoBoxImage = {
     src: string;
     alt: string;
+    href: string;
 };
 
 interface ICLogoBoxProps {
@@ -47,15 +48,22 @@ export const CLogoBox: React.FC<ICLogoBoxProps> = ({
                     justifyContent={'center'}
                     p={1}
                 >
-                    <img
-                        src={logo.src}
-                        alt={logo.alt}
-                        className={enlargeOnHover ? 'thumbnail' : ''}
-                        style={{
-                            objectFit: 'contain',
-                            maxWidth: '100%'
-                        }}
-                    />
+                    <a
+                        href={logo.href}
+                        target={'_blank'}
+                        rel={'noreferrer'}
+                        style={{ opacity: 1 }}
+                    >
+                        <img
+                            src={logo.src}
+                            alt={logo.alt}
+                            className={enlargeOnHover ? 'thumbnail' : ''}
+                            style={{
+                                objectFit: 'contain',
+                                maxWidth: '100%'
+                            }}
+                        />
+                    </a>
                 </Grid>
             ))}
         </Grid>

@@ -51,12 +51,16 @@ export const HomeTemplate = () => {
                                 , é parte da regional sul-americana do concurso.
                                 Neste ano ocorre a 28ª edição da Maratona.
                             </CParagraph>
-                            <Box mt={3} height={300} width={'100%'}>
+                            <Box
+                                mt={3}
+                                height={{ xs: 400, md: 300 }}
+                                width={'100%'}
+                            >
                                 <iframe
                                     title={'maratona'}
                                     height={'100%'}
                                     width={'100%'}
-                                    src="https://www.youtube.com/embed/VgDgWzBL7s4"
+                                    src="https://www.youtube.com/embed/XyLn3g4RB8Y"
                                 />
                             </Box>
                         </CTextSlice>
