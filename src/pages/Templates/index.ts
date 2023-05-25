@@ -6,3 +6,4 @@ export * from './EquipeColaboradores/EquipeColaboradoresTemplate';
 export * from './AcomodacoesTurismo/AcomodacoesTurismo';
 export * from './Programacao/ProgramacaoTemplate';
 export * from './SobreMaratona/SobreMaratona';
+export * from './CafeComLeite/CafeComLeite';
