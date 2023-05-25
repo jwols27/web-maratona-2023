@@ -8,7 +8,8 @@ import {
     PatrocinadoresTemplate,
     SobreFinalTemplate,
     SobreMaratona,
-    ProgramacaoTemplate
+    ProgramacaoTemplate,
+    CafeComLeite
 } from './pages/Templates';
 
 interface IRouterProps {
@@ -69,7 +70,7 @@ const routerData: IRouterProps[] = [
     //CAFÉ COM LEITE E VISITANTES
     {
         path: 'cafe-com-leite-e-visitantes',
-        element: <></>
+        element: <CafeComLeite />
     },
 
     //ERROR

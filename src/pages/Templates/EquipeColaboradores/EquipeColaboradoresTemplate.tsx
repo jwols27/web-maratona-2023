@@ -1,11 +1,13 @@
 import React from 'react';
-import { Box, Grid } from '@mui/material';
+import { Box, Grid, useMediaQuery, useTheme } from '@mui/material';
 import { CTitle } from '../../../shared/components';
 
 import { Perfil } from './components/Perfil';
 import { equipe } from '../data/equipe';
 
 export const EquipeColaboradoresTemplate = () => {
+    const theme = useTheme();
+    const mdDown = useMediaQuery(theme.breakpoints.down('md'));
     return (
         <Box bgcolor={'tertiary.main'} p={{ xs: 4, md: 8 }}>
             <CTitle
@@ -14,6 +16,7 @@ export const EquipeColaboradoresTemplate = () => {
                 fontWeight={950}
                 contrastText
                 mb={4}
+                align={mdDown ? 'center' : undefined}
             >
                 Equipe e Colaboradores
             </CTitle>
