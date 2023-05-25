@@ -8,6 +8,6 @@ export * from './CTitle';
 export * from './CHeader';
 export * from './CBalloon';
 export * from './CLogoBox';
-
+export * from './CDescCard';
 //
 export * from './FadeInSection';

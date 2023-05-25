@@ -16,6 +16,16 @@ a:active { text-decoration: none; }
     margin-bottom: 1rem;
 }
 
+.special-link a {
+    font-style: italic;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+}
+
+.special-link a, li, ol {
+    border-bottom-color: inherit;
+}
+
 .nav-item {
     text-decoration: none;
     color: inherit !important;

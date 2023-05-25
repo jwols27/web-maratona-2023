@@ -1,31 +1,24 @@
 import React from 'react';
-import {
-    Typography,
-    TypographyProps,
-    useMediaQuery,
-    useTheme
-} from '@mui/material';
+import { Typography, TypographyProps } from '@mui/material';
 
 interface ICParagraphProps {
-    useContrastText?: boolean;
+    contrastText?: boolean;
     children: React.ReactNode;
     component?: React.ElementType;
 }
 
 export const CParagraph: React.FC<ICParagraphProps & TypographyProps> = ({
-    useContrastText,
+    contrastText,
     component = 'span',
     children,
     ...props
 }) => {
-    const theme = useTheme();
-    const mdDown = useMediaQuery(theme.breakpoints.down('md'));
     return (
         <Typography
-            color={`text${useContrastText ? '.secondary' : '.primary'}`}
-            variant={mdDown ? 'body2' : 'body1'}
+            color={`text${contrastText ? '.secondary' : '.primary'}`}
+            variant={'body1'}
             style={{ wordWrap: 'break-word' }}
-            width={'100%'}
+            //width={'100%'}
             lineHeight={1.75}
             component={component}
             {...props}

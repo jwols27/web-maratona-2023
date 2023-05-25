@@ -1,2 +1,3 @@
 export * from './CronogramaResumido';
-export * from './CronogramaDia';
+export * from './CronogramaHeader';
+export * from './CronogramaBalloon';

@@ -11,20 +11,11 @@ import {
 } from '../../../shared/components';
 
 import campus from '../../../shared/assets/campus.jpg';
-import { Grid, useMediaQuery, useTheme } from '@mui/material';
+import { Grid, useTheme } from '@mui/material';
 import { OrganizacaoGrafico } from './components/OrganizacaoGrafico';
 
 export const SobreFinalTemplate = () => {
     const theme = useTheme();
-    const smDown = useMediaQuery(theme.breakpoints.down('sm'));
-    const mdDown = useMediaQuery(theme.breakpoints.down('md'));
-
-    const responsiveness = React.useMemo(() => {
-        if (smDown) return 'h6';
-        if (mdDown) return 'h4';
-        return 'h3';
-    }, [mdDown, smDown]);
-
     return (
         <div id={'sobre-a-final'}>
             <FinalPrincipal />
@@ -45,7 +36,7 @@ export const SobreFinalTemplate = () => {
                             noShadow
                         >
                             <CTitle
-                                variant={responsiveness}
+                                variant={'h3'}
                                 textTransform={'uppercase'}
                                 fontWeight={950}
                                 color={'secondary.main'}
