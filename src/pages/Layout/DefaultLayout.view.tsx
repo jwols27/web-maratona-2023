@@ -3,7 +3,7 @@ import { Box, useMediaQuery, useTheme } from '@mui/material';
 import { VAppBar, VDrawer, VFooter } from './components';
 import { useLocation } from 'react-router-dom';
 
-import { navHome, navItems } from './data/NavItems';
+import { navHome, navItems } from '../NavItems';
 import { CBanner } from '../../shared/components';
 import { FooterContent } from './components/FooterContent';
 

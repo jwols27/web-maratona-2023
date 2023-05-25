@@ -1,10 +1,9 @@
-import { Box, Grid, Typography, useMediaQuery, useTheme } from '@mui/material';
+import { Box, Grid, Typography, useTheme } from '@mui/material';
 import { CParagraph, CTitle } from '../../../../shared/components';
 import React from 'react';
 
 export const FormeSeuTime = () => {
     const theme = useTheme();
-    const mdDown = useMediaQuery(theme.breakpoints.down('md'));
     return (
         <Grid item xs={12} md={5.5}>
             <Box
@@ -21,18 +20,19 @@ export const FormeSeuTime = () => {
             >
                 <CTitle
                     contrastText
-                    fontSize={mdDown ? '2rem' : '2.75rem'}
                     variant={'h3'}
                     fontWeight={700}
                     mb={0}
+                    pr={4}
                 >
                     Forme seu time!
                 </CTitle>
             </Box>
             <Box width={'90%'} px={{ xs: 2, sm: 8 }}>
                 <Typography
-                    variant={mdDown ? 'body1' : 'h6'}
+                    variant={'h6'}
                     color={'primary.main'}
+                    fontWeight={600}
                     lineHeight={1.25}
                     mt={1}
                     mb={5}
@@ -47,53 +47,33 @@ export const FormeSeuTime = () => {
                 >
                     Inscrições
                 </CTitle>
-                <CParagraph>
+                <CParagraph borderColor={'tertiary.main'}>
                     O representante do time (coach) deverá realizar as
                     inscrições até dia <b>??/??/2023</b>.<br />
                     Ele deverá:
-                    <ol className={'custom-list'}>
+                    <ol className={'custom-list special-link'}>
                         <li>
                             preencher as informações dos times{' '}
-                            <span
-                                className={'como-participar-time'}
-                                style={{
-                                    borderBottomColor:
-                                        theme.palette.tertiary.main
-                                }}
+                            <a
+                                href={'https://icpc.global/'}
+                                target={'_blank'}
+                                rel={'noreferrer'}
                             >
-                                <a
-                                    href={'https://icpc.global/'}
-                                    target={'_blank'}
-                                    rel={'noreferrer'}
-                                    className={'como-participar-time'}
-                                    style={{
-                                        borderBottomColor:
-                                            theme.palette.tertiary.main
-                                    }}
-                                >
-                                    no site do ICPC
-                                </a>
-                            </span>
+                                no site do ICPC
+                            </a>
                         </li>
                         <li>
                             providenciar o pagamento da inscrição{' '}
-                            <span
-                                className={'como-participar-time'}
-                                style={{
-                                    borderBottomColor:
-                                        theme.palette.tertiary.main
-                                }}
+                            <a
+                                href={
+                                    'https://centraldesistemas.sbc.org.br/ecos/maratonasbc2022/'
+                                }
+                                target={'_blank'}
+                                rel={'noreferrer'}
+                                className={'special-link'}
                             >
-                                <a
-                                    href={
-                                        'https://centraldesistemas.sbc.org.br/ecos/maratonasbc2022/'
-                                    }
-                                    target={'_blank'}
-                                    rel={'noreferrer'}
-                                >
-                                    no site do ECOS da SBC
-                                </a>
-                            </span>
+                                no site do ECOS da SBC
+                            </a>
                         </li>
                     </ol>
                 </CParagraph>

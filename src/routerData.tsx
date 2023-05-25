@@ -1,13 +1,15 @@
 import React from 'react';
 import ErrorView from './pages/Error/Error.view';
 import {
+    AcomodacoesTurismo,
     ComoParticiparTemplate,
     EquipeColaboradoresTemplate,
     HomeTemplate,
     PatrocinadoresTemplate,
-    SobreFinalTemplate
+    SobreFinalTemplate,
+    SobreMaratona,
+    ProgramacaoTemplate
 } from './pages/Templates';
-import { ProgramacaoTemplate } from './pages/Templates/Programacao/ProgramacaoTemplate';
 
 interface IRouterProps {
     path: string;
@@ -31,7 +33,7 @@ const routerData: IRouterProps[] = [
     //MARATONA
     {
         path: 'maratona',
-        element: <></>
+        element: <SobreMaratona />
     },
 
     //SOBRE A FINAL
@@ -55,7 +57,7 @@ const routerData: IRouterProps[] = [
     //ACOMODAÇÕES E TURISMO
     {
         path: 'acomodacoes-e-turismo',
-        element: <></>
+        element: <AcomodacoesTurismo />
     },
 
     //PATROCINADORES

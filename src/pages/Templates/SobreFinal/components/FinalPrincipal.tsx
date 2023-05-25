@@ -9,7 +9,6 @@ import logo from '../../../../shared/assets/logos/logo-maratona.png';
 
 export const FinalPrincipal = () => {
     const theme = useTheme();
-    const mdDown = useMediaQuery(theme.breakpoints.down('md'));
     const betweenMdLg = useMediaQuery(theme.breakpoints.between('md', 'lg'));
     const xlDown = useMediaQuery(theme.breakpoints.down('xl'));
 
@@ -47,14 +46,14 @@ export const FinalPrincipal = () => {
             <Box display={'flex'} flexDirection={'row'} pb={4}>
                 <Box display={'flex'} flexDirection={'column'} mr={2}>
                     <CTitle
-                        variant={mdDown ? 'h4' : 'h3'}
+                        variant={'h3'}
                         textTransform={'uppercase'}
                         fontWeight={950}
                         contrastText
                     >
                         Sobre a final
                     </CTitle>
-                    <CParagraph useContrastText fontWeight={600} mb={4}>
+                    <CParagraph contrastText fontWeight={600} mb={4}>
                         <CParagraph
                             component={'span'}
                             color={'primary.main'}
@@ -72,14 +71,10 @@ export const FinalPrincipal = () => {
                         concurso oferecerá auxílio para os times de fora da sede
                         para hospedagem durante as finais.
                     </CParagraph>
-                    <CTitle
-                        variant={mdDown ? 'h5' : 'h4'}
-                        fontWeight={600}
-                        contrastText
-                    >
+                    <CTitle variant={'h4'} fontWeight={600} contrastText>
                         Realização
                     </CTitle>
-                    <CParagraph useContrastText fontWeight={600}>
+                    <CParagraph contrastText fontWeight={600}>
                         A final brasileira da XXVIII Maratona de Programação
                         será realizada em Chapecó -SC, pela Universidade do
                         Oeste de Santa Catarina (UNOESC). O diretor da final é o

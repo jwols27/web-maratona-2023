@@ -7,7 +7,9 @@ interface ICHeaderProps {
         width: string;
         height: string;
         class?: string;
+        borderWidth?: number;
     };
+
     contrastText?: boolean;
     boxColor?: string;
 }
@@ -25,7 +27,8 @@ export const CHeader: React.FC<ICHeaderProps & BoxProps> = ({
             alignItems={'center'}
             flexDirection={'column'}
             width={'100%'}
-            sx={{ borderColor: 'inherit' }}
+            //borderColor={'inherit'}
+            style={{ borderColor: 'inherit' }}
         >
             <Box
                 p={4}
@@ -45,6 +48,7 @@ export const CHeader: React.FC<ICHeaderProps & BoxProps> = ({
                     width={'100%'}
                     display={'flex'}
                     justifyContent={'center'}
+                    sx={{ borderWidth: arrow.borderWidth }}
                 >
                     <div
                         style={{

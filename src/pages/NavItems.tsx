@@ -1,4 +1,4 @@
-import { TNavItem } from '../components';
+import { TNavItem } from './Layout/components';
 import {
     BsCalendar2Fill,
     BsFillBalloonFill,
@@ -43,7 +43,7 @@ export const navItems: TNavItem[] = [
         icon: <BsPeopleFill size={'20'} />
     },
     {
-        label: 'Acomodações, Turismo',
+        label: 'Acomodações e Turismo',
         path: 'acomodacoes-e-turismo',
         icon: <FaHotel size={'20'} />
     },

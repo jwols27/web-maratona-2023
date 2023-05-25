@@ -1,25 +1,15 @@
 import React from 'react';
-import { Box, Grid, useMediaQuery, useTheme } from '@mui/material';
+import { Box, Grid } from '@mui/material';
 import { CTitle } from '../../../shared/components';
 
 import { Perfil } from './components/Perfil';
 import { equipe } from '../data/equipe';
 
 export const EquipeColaboradoresTemplate = () => {
-    const theme = useTheme();
-    const mdDown = useMediaQuery(theme.breakpoints.down('md'));
-    const smDown = useMediaQuery(theme.breakpoints.down('sm'));
-
-    const responsiveness = React.useMemo(() => {
-        if (smDown) return 'h6';
-        if (mdDown) return 'h4';
-        return 'h3';
-    }, [mdDown, smDown]);
-
     return (
         <Box bgcolor={'tertiary.main'} p={{ xs: 4, md: 8 }}>
             <CTitle
-                variant={responsiveness}
+                variant={'h3'}
                 textTransform={'uppercase'}
                 fontWeight={950}
                 contrastText

@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-    Avatar,
-    Grid,
-    Typography,
-    useMediaQuery,
-    useTheme
-} from '@mui/material';
+import { Avatar, Grid, Typography } from '@mui/material';
 import { CParagraph } from '../../../../shared/components';
 
 import avatar from '../../../../shared/assets/avatars/default-avatar.png';
@@ -23,9 +17,6 @@ export const Perfil: React.FC<IPerfilProps> = ({
     instituicao = 'Instituição',
     children
 }) => {
-    const theme = useTheme();
-    const mdDown = useMediaQuery(theme.breakpoints.down('md'));
-
     return (
         <Grid container item direction={'row'} alignItems={'center'}>
             <Grid
@@ -47,7 +38,7 @@ export const Perfil: React.FC<IPerfilProps> = ({
             <Grid item xs={6}>
                 <Typography
                     color={'primary.main'}
-                    variant={mdDown ? 'h6' : 'h5'}
+                    variant={'h5'}
                     fontWeight={'bold'}
                 >
                     {nome}
