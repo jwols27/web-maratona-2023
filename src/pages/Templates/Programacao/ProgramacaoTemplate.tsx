@@ -1,6 +1,5 @@
 import React from 'react';
 import { Box } from '@mui/material';
-import { LogoMaratonaSBC } from '../../../shared/icons/LogoMaratonaSBC';
 
 export const ProgramacaoTemplate = () => {
     return (
@@ -9,9 +8,7 @@ export const ProgramacaoTemplate = () => {
                 display={'flex'}
                 alignItems={'center'}
                 justifyContent={'center'}
-            >
-                <LogoMaratonaSBC />
-            </Box>
+            ></Box>
         </div>
     );
 };
