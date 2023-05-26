@@ -2,8 +2,8 @@ import React from 'react';
 import { Box, Divider, Drawer } from '@mui/material';
 
 import { NavItem, TNavItem } from './NavItem';
+import { LogoMaratonaChapeco } from '../../../shared/icons/LogoMaratonaChapeco';
 import '../layout.css';
-import logoChap from '../../../shared/assets/logos/logo-chapeco.png';
 
 interface IVDrawerProps {
     itens: TNavItem[];
@@ -40,14 +40,9 @@ export const VDrawer: React.FC<IVDrawerProps> = ({
                     bgcolor={'primary.dark'}
                     py={1.5}
                 >
-                    <img
-                        src={logoChap}
-                        style={{
-                            objectFit: 'contain',
-                            height: '100%'
-                        }}
-                        alt={'Maratona SBC de Programação'}
-                    />
+                    <Box width={{ xs: 75, md: 125 }} height={'100%'}>
+                        <LogoMaratonaChapeco invert />
+                    </Box>
                 </Box>
                 {itens.map((item) => (
                     <div key={item.path}>

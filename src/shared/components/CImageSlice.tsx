@@ -9,9 +9,14 @@ interface IImageComponentProps {
     enlarge?: boolean;
 }
 
-const ImageComponent: React.FC<
-    IImageComponentProps & React.ImgHTMLAttributes<HTMLImageElement>
-> = ({ label, enlarge, ...props }) => {
+type TCustomImageProps = IImageComponentProps &
+    React.ImgHTMLAttributes<HTMLImageElement>;
+
+const ImageComponent: React.FC<TCustomImageProps> = ({
+    label,
+    enlarge,
+    ...props
+}) => {
     return (
         <>
             <Tooltip title={props.title} placement={'top'} arrow>
@@ -49,7 +54,7 @@ const ImageComponent: React.FC<
 };
 
 interface ICImageSliceProps {
-    images: IImageComponentProps & React.ImgHTMLAttributes<HTMLImageElement>[];
+    images: TCustomImageProps[];
 
     mainBoxProps?: BoxProps;
     textBoxProps?: BoxProps;
@@ -96,10 +101,10 @@ export const CImageSlice: React.FC<ICImageSliceProps> = ({
             >
                 {images.map((img, index) => {
                     return (
-                        <>
-                            <ImageComponent key={`image-${index}`} {...img} />
+                        <div key={`image-${index}`}>
+                            <ImageComponent {...img} />
                             {index !== images.length - 1 && <Box mb={2} />}
-                        </>
+                        </div>
                     );
                 })}
             </Box>
