@@ -12,10 +12,11 @@ import {
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
 
-import logoProg from '../../../shared/assets/logos/logo-programacao.png';
-import logoChap from '../../../shared/assets/logos/logo-chapeco.png';
-import '../layout.css';
 import { CSocials } from '../../../shared/components';
+import { LogoMaratonaChapeco } from '../../../shared/icons/LogoMaratonaChapeco';
+
+import '../layout.css';
+import { LogoMaratonaSBC } from '../../../shared/icons/LogoMaratonaSBC';
 
 interface IVAppBarProps {
     handleDrawer: (b: boolean) => void;
@@ -47,17 +48,22 @@ export const VAppBar: React.FC<IVAppBarProps> = ({ handleDrawer, path }) => {
                 >
                     {!mdDown && (
                         <>
-                            <Grid item ml={{ xs: 10, lg: 15 }} height={'100%'}>
+                            <Grid
+                                item
+                                ml={{ xs: 10, lg: 15 }}
+                                height={'100%'}
+                                width={125}
+                            >
                                 <Tooltip title={'Voltar ao início'} arrow>
                                     <Link to={'/'}>
-                                        <img
-                                            src={logoProg}
-                                            style={{
-                                                objectFit: 'contain',
-                                                height: '100%'
-                                            }}
-                                            alt={'Maratona SBC de Programação'}
-                                        ></img>
+                                        <LogoMaratonaSBC
+                                            color2={
+                                                path !== ''
+                                                    ? theme.palette.primary.dark
+                                                    : undefined
+                                            }
+                                            invert={path !== ''}
+                                        />
                                     </Link>
                                 </Tooltip>
                             </Grid>
@@ -69,15 +75,9 @@ export const VAppBar: React.FC<IVAppBarProps> = ({ handleDrawer, path }) => {
                                 ml={4}
                                 p={0.33}
                                 height={'100%'}
+                                width={100}
                             >
-                                <img
-                                    src={logoChap}
-                                    style={{
-                                        objectFit: 'contain',
-                                        height: '100%'
-                                    }}
-                                    alt={'Maratona SBC de Programação'}
-                                ></img>
+                                <LogoMaratonaChapeco invert={path !== ''} />
                             </Grid>
                         </>
                     )}
