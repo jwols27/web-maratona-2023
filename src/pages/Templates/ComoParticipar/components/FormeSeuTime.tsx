@@ -1,4 +1,4 @@
-import { Box, Grid, Typography, useTheme } from '@mui/material';
+import { Box, Grid, useTheme } from '@mui/material';
 import { CParagraph, CTitle } from '../../../../shared/components';
 import React from 'react';
 
@@ -29,7 +29,8 @@ export const FormeSeuTime = () => {
                 </CTitle>
             </Box>
             <Box width={'90%'} px={{ xs: 2, sm: 8 }}>
-                <Typography
+                <CParagraph
+                    component={'p'}
                     variant={'h6'}
                     color={'primary.main'}
                     fontWeight={600}
@@ -39,7 +40,7 @@ export const FormeSeuTime = () => {
                 >
                     Cada time precisa de 1 coach,
                     <br />3 integrantes e poderá ter 1 reserva.
-                </Typography>
+                </CParagraph>
                 <CTitle
                     titleColor={'tertiary'}
                     variant={'h4'}

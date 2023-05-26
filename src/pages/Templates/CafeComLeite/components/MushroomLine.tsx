@@ -17,7 +17,7 @@ export const MushroomLine: React.FC<IMushroomLineProps> = ({
 
         for (let i = 0; i < responsiveness; i++) {
             lista.push(
-                <Grid item height={height}>
+                <Grid item height={height} key={`mushroom${height}#${i}`}>
                     <img src={src} alt={''} />
                 </Grid>
             );

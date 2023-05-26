@@ -1,6 +1,6 @@
 import React from 'react';
+import { Grid } from '@mui/material';
 
-import '../../../shared/styles/thumbnail.css';
 import { FinalPrincipal } from './components/FinalPrincipal';
 import {
     CBanner,
@@ -9,13 +9,12 @@ import {
     CTitle,
     FadeInSection
 } from '../../../shared/components';
-
-import campus from '../../../shared/assets/campus.jpg';
-import { Grid, useTheme } from '@mui/material';
 import { OrganizacaoGrafico } from './components/OrganizacaoGrafico';
 
+import campus from '../../../shared/assets/campus.jpg';
+import '../../../shared/styles/thumbnail.css';
+
 export const SobreFinalTemplate = () => {
-    const theme = useTheme();
     return (
         <div id={'sobre-a-final'}>
             <FinalPrincipal />
@@ -59,14 +58,14 @@ export const SobreFinalTemplate = () => {
                         </CTextSlice>
                     </Grid>
                     <Grid
+                        container
                         item
                         xs={12}
                         lg={6}
-                        display={'flex'}
                         alignItems={'center'}
                         justifyContent={'center'}
                         position={'relative'}
-                        borderColor={theme.palette.tertiary.main}
+                        borderColor={'tertiary.main'}
                         minHeight={{ xs: 500, lg: 440 }}
                     >
                         <OrganizacaoGrafico />

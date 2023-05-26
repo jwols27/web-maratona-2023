@@ -21,13 +21,12 @@ export const CSocials: React.FC<ICSocialsProps> = ({
     showInstagram
 }) => {
     return (
-        <div style={{ marginTop: 4 }}>
+        <div style={{ marginTop: 4 }} className={'thumbnail-link'}>
             {showFacebook && (
                 <a
                     href={'https://www.google.com'}
                     target={'_blank'}
                     rel="noreferrer"
-                    className={'thumbnail-link'}
                     style={{
                         padding: 1,
                         marginRight: spaceInBetween,
@@ -42,7 +41,6 @@ export const CSocials: React.FC<ICSocialsProps> = ({
                     href={'https://www.google.com'}
                     target={'_blank'}
                     rel="noreferrer"
-                    className={'thumbnail-link'}
                     style={{
                         padding: 1,
                         marginRight: spaceInBetween,
@@ -57,7 +55,6 @@ export const CSocials: React.FC<ICSocialsProps> = ({
                     href={'https://www.google.com'}
                     target={'_blank'}
                     rel="noreferrer"
-                    className={'thumbnail-link'}
                     style={{
                         padding: 1,
                         marginRight: spaceInBetween,
@@ -72,7 +69,6 @@ export const CSocials: React.FC<ICSocialsProps> = ({
                     href={'https://www.google.com'}
                     target={'_blank'}
                     rel="noreferrer"
-                    className={'thumbnail-link'}
                     style={{
                         padding: 1,
                         marginRight: spaceInBetween,

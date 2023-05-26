@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Grid, Typography, useTheme } from '@mui/material';
+import { Box, Grid, Typography } from '@mui/material';
 import {
     CDescCard,
     CParagraph,
@@ -10,34 +10,28 @@ import { AcomTurBalloon } from './components/AcomTurBalloon';
 import hotelLang from '../../../shared/assets/hotel/hotel-lang.webp';
 import hotelMogano from '../../../shared/assets/hotel/hotel-mogano.jpg';
 
+const mogano: TBalloon = {
+    size: 200,
+    offset: '12px',
+    color: 'gray',
+    children: (
+        <img
+            src={hotelMogano}
+            alt={'icon'}
+            className={'balloon-content-full'}
+        />
+    )
+};
+const lang: TBalloon = {
+    size: 200,
+    offset: '12px',
+    color: 'gray',
+    children: (
+        <img src={hotelLang} alt={'icon'} className={'balloon-content-full'} />
+    )
+};
+
 export const AcomodacoesTurismo = () => {
-    const theme = useTheme();
-
-    const mogano: TBalloon = {
-        size: 200,
-        offset: '12px',
-        color: 'gray',
-        children: (
-            <img
-                src={hotelMogano}
-                alt={'icon'}
-                className={'balloon-content-full'}
-            />
-        )
-    };
-    const lang: TBalloon = {
-        size: 200,
-        offset: '12px',
-        color: 'gray',
-        children: (
-            <img
-                src={hotelLang}
-                alt={'icon'}
-                className={'balloon-content-full'}
-            />
-        )
-    };
-
     return (
         <Grid container>
             <Grid
@@ -133,15 +127,15 @@ export const AcomodacoesTurismo = () => {
                                     Hotel Mogano Business
                                 </Typography>
                             }
-                            headerColor={theme.palette.primary.main}
+                            headerColor={'primary.main'}
                             borderColor={'black'}
                             borderWidth={2}
+                            align={'center'}
+                            lineHeight={1.75}
                         >
-                            <CParagraph align={'center'} component={'p'}>
-                                Avenida Getúlio Vargas, 1372-N, Centro
-                                <br />
-                                Chapecó-SC, CEP 89801-000, Brasil
-                            </CParagraph>
+                            Avenida Getúlio Vargas, 1372-N, Centro
+                            <br />
+                            Chapecó-SC, CEP 89801-000, Brasil
                         </CDescCard>
                     </Grid>
 
@@ -158,15 +152,15 @@ export const AcomodacoesTurismo = () => {
                                     Hotel Lang Palace
                                 </Typography>
                             }
-                            headerColor={theme.palette.primary.main}
+                            headerColor={'primary.main'}
                             borderColor={'black'}
                             borderWidth={2}
+                            align={'center'}
+                            lineHeight={1.75}
                         >
-                            <CParagraph align={'center'} component={'p'}>
-                                Rua Sete de Setembro, 150 D, Centro
-                                <br />
-                                Chapecó-SC, CEP 89801-000, Brasil
-                            </CParagraph>
+                            Rua Sete de Setembro, 150 D, Centro
+                            <br />
+                            Chapecó-SC, CEP 89801-000, Brasil
                         </CDescCard>
                     </Grid>
                 </Grid>

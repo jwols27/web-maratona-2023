@@ -50,8 +50,8 @@ export const CronogramaResumido = () => {
                 <Grid container item xs={3} direction={'column'}>
                     <CronogramaBalloon balloon={balloon1} />
                     <CDescCard
-                        headerColor={theme.palette.tertiary.main}
-                        borderColor={theme.palette.tertiary.main}
+                        headerColor={'tertiary.main'}
+                        borderColor={'tertiary.main'}
                         header={
                             <CronogramaHeader
                                 date={'19/10'}
@@ -70,8 +70,8 @@ export const CronogramaResumido = () => {
                 <Grid container item xs={3} direction={'column'}>
                     <CronogramaBalloon balloon={balloon2} />
                     <CDescCard
-                        headerColor={theme.palette.secondary.main}
-                        borderColor={theme.palette.tertiary.main}
+                        headerColor={'secondary.main'}
+                        borderColor={'tertiary.main'}
                         header={
                             <CronogramaHeader
                                 date={'20/10'}
@@ -93,8 +93,8 @@ export const CronogramaResumido = () => {
                 <Grid container item xs={3} direction={'column'}>
                     <CronogramaBalloon balloon={balloon3} />
                     <CDescCard
-                        headerColor={theme.palette.tertiary.main}
-                        borderColor={theme.palette.tertiary.main}
+                        headerColor={'tertiary.main'}
+                        borderColor={'tertiary.main'}
                         header={
                             <CronogramaHeader
                                 date={'21/10'}
@@ -116,8 +116,8 @@ export const CronogramaResumido = () => {
                 <Grid container item xs={3} direction={'column'}>
                     <CronogramaBalloon balloon={balloon4} />
                     <CDescCard
-                        headerColor={theme.palette.secondary.main}
-                        borderColor={theme.palette.tertiary.main}
+                        headerColor={'secondary.main'}
+                        borderColor={'tertiary.main'}
                         header={
                             <CronogramaHeader
                                 date={'22/10'}
