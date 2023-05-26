@@ -23,12 +23,12 @@ export const EquipeColaboradoresTemplate = () => {
             <Grid container direction={{ xs: 'column', md: 'row' }} spacing={4}>
                 <Grid container item xs={6} direction={'column'} spacing={4}>
                     {equipe.slice(0, 4).map((perfil) => (
-                        <Perfil {...perfil} />
+                        <Perfil key={perfil.nome} {...perfil} />
                     ))}
                 </Grid>
                 <Grid container item xs={6} direction={'column'} spacing={4}>
                     {equipe.slice(4, 8).map((perfil) => (
-                        <Perfil {...perfil} />
+                        <Perfil key={perfil.nome} {...perfil} />
                     ))}
                 </Grid>
             </Grid>

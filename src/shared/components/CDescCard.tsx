@@ -2,7 +2,7 @@ import React from 'react';
 import { Grid, TypographyProps } from '@mui/material';
 import { CHeader, CParagraph } from './index';
 
-import './desc-card.styles.css';
+import '../styles/desc-card.styles.css';
 
 interface ICDescCardProps {
     header: React.ReactNode;
@@ -29,7 +29,7 @@ export const CDescCard: React.FC<ICDescCardProps & TypographyProps> = ({
             justifyContent={'center'}
             flexDirection={'column'}
             bgcolor={'white'}
-            sx={{ borderColor }}
+            borderColor={borderColor}
         >
             <CHeader
                 alignItems={'end'}

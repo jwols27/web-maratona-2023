@@ -1,5 +1,5 @@
 import React from 'react';
-import { Avatar, Grid, Typography } from '@mui/material';
+import { Avatar, Grid, GridProps, Typography } from '@mui/material';
 import { CParagraph } from '../../../../shared/components';
 
 import avatar from '../../../../shared/assets/avatars/default-avatar.png';
@@ -11,14 +11,15 @@ export interface IPerfilProps {
     children?: React.ReactNode;
 }
 
-export const Perfil: React.FC<IPerfilProps> = ({
+export const Perfil: React.FC<IPerfilProps & GridProps> = ({
     src = avatar,
     nome = 'Colaborador(a)',
     instituicao = 'Instituição',
-    children
+    children,
+    ...props
 }) => {
     return (
-        <Grid container item direction={'row'} alignItems={'center'}>
+        <Grid container item direction={'row'} alignItems={'center'} {...props}>
             <Grid
                 item
                 mr={{ xs: 2, md: 3 }}

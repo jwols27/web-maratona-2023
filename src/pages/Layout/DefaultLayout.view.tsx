@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Box, useMediaQuery, useTheme } from '@mui/material';
 import { VAppBar, VDrawer, VFooter } from './components';
 import { useLocation } from 'react-router-dom';
@@ -8,26 +8,30 @@ import { CBanner } from '../../shared/components';
 import { FooterContent } from './components/FooterContent';
 
 import mainBanner from '../../shared/assets/main-banner.png';
-import smallBanner from '../../shared/assets/small-banner.png';
+import mobileBanner from '../../shared/assets/small-banner.png';
+import { useOnScreen } from '../../shared/hooks';
 
 interface IDefaultLayoutProps {
     children: React.ReactNode;
 }
 
 const DefaultLayout: React.FC<IDefaultLayoutProps> = ({ children }) => {
-    const [open, setOpen] = useState<boolean>(false);
+    const [open, setOpen] = React.useState<boolean>(false);
     const theme = useTheme();
     const mdDown = useMediaQuery(theme.breakpoints.down('md'));
 
     const location = useLocation();
     const path = location.pathname.split('/')[1];
 
+    const elementRef = React.useRef<HTMLDivElement>(null);
+    const isOnScreen = useOnScreen(elementRef);
+
     const handleDrawer = (b: boolean) => {
         setOpen(b);
     };
 
     // altera título da web de acordo com a página
-    useEffect(() => {
+    React.useEffect(() => {
         const title = navItems.find((obj) => {
             return obj.path === path;
         });
@@ -38,7 +42,7 @@ const DefaultLayout: React.FC<IDefaultLayoutProps> = ({ children }) => {
 
     return (
         <Box flex={1}>
-            <VAppBar handleDrawer={handleDrawer} path={path} />
+            <VAppBar handleDrawer={handleDrawer} isVisible={isOnScreen} />
             <VDrawer
                 itens={[navHome, ...navItems]}
                 open={open}
@@ -46,23 +50,31 @@ const DefaultLayout: React.FC<IDefaultLayoutProps> = ({ children }) => {
                 path={path}
             />
 
-            {path === '' ? (
-                <CBanner
-                    src={mdDown ? smallBanner : mainBanner}
-                    alt={'Banner'}
-                    style={{
-                        height: '100vh'
-                    }}
-                />
-            ) : (
-                <Box height={{ xs: 115, md: 175 }} bgcolor={'primary.dark'} />
-            )}
+            <div id={'header'} style={{ position: 'relative' }}>
+                {path === '' ? (
+                    <>
+                        <CBanner
+                            //ref={elementRef}
+                            src={mdDown ? mobileBanner : mainBanner}
+                            alt={'Banner'}
+                            style={{
+                                height: '100vh'
+                            }}
+                        />
+                        <div
+                            ref={elementRef}
+                            style={{ position: 'absolute', top: '18vh' }}
+                        />
+                    </>
+                ) : (
+                    <Box
+                        height={{ xs: 115, md: 175 }}
+                        bgcolor={'primary.dark'}
+                    />
+                )}
+            </div>
 
-            <Box
-                minHeight={'75.5vh'}
-                flexDirection={'column'}
-                px={{ xs: 0, xl: 10, xxl: 15 }}
-            >
+            <Box minHeight={'75.5vh'} px={{ xs: 0, xl: 10, xxl: 15 }}>
                 {children}
             </Box>
             <VFooter>

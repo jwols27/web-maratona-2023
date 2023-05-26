@@ -15,7 +15,7 @@ export const VFooter: React.FC<IVFooterProps> = ({ children }) => {
             alignItems={'center'}
             flexDirection={'column'}
             mt={6}
-            sx={{ position: 'relative', width: '100%' }}
+            sx={{ position: 'relative' }}
         >
             {children}
         </Box>

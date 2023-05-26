@@ -83,7 +83,7 @@ export const CImageSlice: React.FC<ICImageSliceProps> = ({
             boxShadow={noShadow ? 0 : undefined}
             display={'flex'}
             flexDirection={{
-                xs: 'column',
+                xs: reversed ? 'column-reverse' : 'column',
                 md: reversed ? 'row-reverse' : 'row'
             }}
             {...mainBoxProps}

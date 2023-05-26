@@ -1,16 +1,16 @@
-import React from 'react';
+import React, { RefObject } from 'react';
 import { Box, Typography } from '@mui/material';
 
 interface ICBannerProps {
-    height?: number | string;
     label?: string;
+    ref?: RefObject<HTMLElement>;
 }
 
 export const CBanner: React.FC<
     ICBannerProps & React.ImgHTMLAttributes<HTMLImageElement>
-> = ({ label, ...props }) => {
+> = ({ label, ref, ...props }) => {
     return (
-        <Box lineHeight={0}>
+        <Box lineHeight={0} ref={ref}>
             <img src={props.src} alt={props.alt} width={'100%'} {...props} />
             {label && (
                 <Box

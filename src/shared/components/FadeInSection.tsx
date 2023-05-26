@@ -1,5 +1,5 @@
 import React from 'react';
-import './fade-in.css';
+import '../styles/fade-in.css';
 
 interface IFadeInSectionProps {
     children: React.ReactNode;

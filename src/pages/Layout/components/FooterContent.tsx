@@ -35,11 +35,11 @@ export const FooterContent = () => {
                         lineHeight={1.75}
                         letterSpacing={1.25}
                     >
-                        E-mail: aaaaaaaaaa
+                        Tiago Zonta
                         <br />
-                        E-mail: aaaaaaaaaa
+                        E-mail: tiago.zonta@unoesc.edu.br
                         <br />
-                        Telefone: (49) 0 0000-0000
+                        Telefone: (49) 9 9993-6737
                     </Typography>
                 </Grid>
                 <Grid item xs={12} sm={6} md={4}>
@@ -87,7 +87,6 @@ export const FooterContent = () => {
                 justifyContent={'start'}
                 alignItems={'center'}
                 direction={'row'}
-                //width={'100%'}
                 px={{ xs: 4, lg: 8, xl: 16, xxl: 24 }}
                 py={1}
                 spacing={2}

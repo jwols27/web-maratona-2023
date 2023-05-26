@@ -27,7 +27,6 @@ export const CHeader: React.FC<ICHeaderProps & BoxProps> = ({
             alignItems={'center'}
             flexDirection={'column'}
             width={'100%'}
-            //borderColor={'inherit'}
             style={{ borderColor: 'inherit' }}
         >
             <Box

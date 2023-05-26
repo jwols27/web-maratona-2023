@@ -11,6 +11,6 @@
     transform: scale(1.125);
 }
 
-.thumbnail-link {
+.thumbnail-link a {
     opacity: 1 !important;
 }

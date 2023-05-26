@@ -1,9 +1,10 @@
 import React from 'react';
-import { Grid, Typography, useTheme } from '@mui/material';
-import { CHeader } from '../../../shared/components';
+import { Grid, useTheme } from '@mui/material';
+
+import { CHeader, CTitle } from '../../../shared/components';
+import { FormeSeuTime, QuemCoach } from './components';
 
 import '../../../shared/styles/bark-box.css';
-import { FormeSeuTime, QuemCoach } from './components';
 
 export const ComoParticiparTemplate = () => {
     const theme = useTheme();
@@ -14,13 +15,15 @@ export const ComoParticiparTemplate = () => {
                 boxColor={theme.palette.tertiary.main}
                 arrow={{ width: '40px', height: '60px' }}
             >
-                <Typography
+                <CTitle
                     variant={'h3'}
                     textTransform={'uppercase'}
                     fontWeight={950}
+                    mb={0}
+                    contrastText
                 >
                     Como participar
-                </Typography>
+                </CTitle>
             </CHeader>
             <Grid container py={2} display={'flex'} flexDirection={'row'}>
                 <FormeSeuTime />

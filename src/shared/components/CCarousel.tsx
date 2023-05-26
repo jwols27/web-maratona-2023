@@ -3,7 +3,6 @@ import Carousel from 'react-multi-carousel';
 import { Box, Paper, Typography, useMediaQuery, useTheme } from '@mui/material';
 import 'react-multi-carousel/lib/styles.css';
 
-//import logo from '../../shared/assets/logo.png';
 import '../styles/custom-carousel.css';
 
 export type TCarouselItem = {
