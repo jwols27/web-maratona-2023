@@ -3,6 +3,7 @@ import React from 'react';
 import './cafe-com-leite.styles.css';
 import { TimesCCL, Visitantes } from './components';
 import { useMediaQuery, useTheme } from '@mui/material';
+import { FadeInSection } from '../../../shared/components';
 
 export interface CCLComponentProps {
     mediaQuery: string;
@@ -28,7 +29,9 @@ export const CafeComLeite = () => {
     return (
         <div id={'cafe-com-leite-e-visitantes'}>
             <TimesCCL mediaQuery={responsiveness} />
-            <Visitantes mediaQuery={responsiveness} />
+            <FadeInSection>
+                <Visitantes mediaQuery={responsiveness} />
+            </FadeInSection>
         </div>
     );
 };

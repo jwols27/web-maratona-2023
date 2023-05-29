@@ -64,8 +64,8 @@ export const PatrocinadoresTemplate = () => {
                     </CHeader>
                     <Box p={4}>
                         <CLogoBox
-                            logos={logos.slice(7, 9)}
-                            itemsPerRow={2}
+                            logos={logos.slice(4, 10)}
+                            itemsPerRow={3}
                             enlargeOnHover
                         />
                     </Box>
