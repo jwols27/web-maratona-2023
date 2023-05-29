@@ -77,7 +77,6 @@ export const FooterContent = () => {
                         spaceInBetween={8}
                         showFacebook
                         showInstagram
-                        showWhatsapp
                         showYoutube
                     />
                 </Grid>

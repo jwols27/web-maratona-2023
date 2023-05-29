@@ -51,32 +51,31 @@ const DefaultLayout: React.FC<IDefaultLayoutProps> = ({ children }) => {
             />
 
             <div id={'header'} style={{ position: 'relative' }}>
-                {path === '' ? (
-                    <>
-                        <CBanner
-                            //ref={elementRef}
-                            src={mdDown ? mobileBanner : mainBanner}
-                            alt={'Banner'}
-                            style={{
-                                height: '100vh'
-                            }}
-                        />
-                        <div
-                            ref={elementRef}
-                            style={{ position: 'absolute', top: '18vh' }}
-                        />
-                    </>
-                ) : (
-                    <Box
-                        height={{ xs: 115, md: 175 }}
-                        bgcolor={'primary.dark'}
+                <div
+                    ref={elementRef}
+                    style={{
+                        position: 'absolute',
+                        top: '18vh',
+                        display: path === '' ? 'initial' : 'none'
+                    }}
+                />
+                <Box
+                    height={{ xs: 115, md: 175 }}
+                    bgcolor={'primary.dark'}
+                    display={path !== '' ? 'block' : 'none'}
+                />
+                {path === '' && (
+                    <CBanner
+                        src={mdDown ? mobileBanner : mainBanner}
+                        alt={'Banner'}
+                        style={{
+                            height: '100vh'
+                        }}
                     />
                 )}
             </div>
 
-            <Box minHeight={'75.5vh'} px={{ xs: 0, xl: 10, xxl: 15 }}>
-                {children}
-            </Box>
+            <Box px={{ xs: 0, xl: 10, xxl: 15 }}>{children}</Box>
             <VFooter>
                 <FooterContent />
             </VFooter>

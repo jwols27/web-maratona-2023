@@ -1,14 +1,17 @@
 import React from 'react';
-import { Box } from '@mui/material';
+import { FadeInSection } from '../../../shared/components';
+import { CronogramaResumido, CronogramaTitle } from '../Home/components';
 
 export const ProgramacaoTemplate = () => {
     return (
         <div id={'programacao'}>
-            <Box
-                display={'flex'}
-                alignItems={'center'}
-                justifyContent={'center'}
-            ></Box>
+            <FadeInSection>
+                <CronogramaTitle />
+            </FadeInSection>
+
+            <FadeInSection>
+                <CronogramaResumido />
+            </FadeInSection>
         </div>
     );
 };

@@ -15,51 +15,51 @@ export const logos: TLogoBoxImage[] = [
     {
         src: logoSBC,
         alt: 'Logo SBC',
-        href: 'https://google.com'
+        href: 'https://www.sbc.org.br/'
     },
     {
         src: logo45,
         alt: 'Logo SBC 45 anos',
-        href: 'https://google.com'
+        href: 'https://www.sbc.org.br/'
     },
     {
         src: unoesc,
         alt: 'Logo UNOESC',
-        href: 'https://google.com'
+        href: 'https://www.unoesc.edu.br/'
     },
     {
         src: pontoZero,
         alt: 'Logo Ponto Zero',
-        href: 'https://google.com'
+        href: 'https://www.instagram.com/unoescpontozero/'
     },
     {
         src: logoAcic,
         alt: 'Logo ACIC',
-        href: 'https://google.com'
+        href: 'https://www.acichapeco.com.br/'
     },
     {
         src: logoDeatec,
         alt: 'Logo DEATEC',
-        href: 'https://google.com'
+        href: 'https://deatec.org.br/pt'
     },
     {
         src: LogoPollen,
         alt: 'Logo pollen',
-        href: 'https://google.com'
+        href: 'https://www.instagram.com/pollenparque/'
     },
     {
         src: logoPrefeitura,
         alt: 'Logo Prefeitura de Chapecó',
-        href: 'https://google.com'
+        href: 'https://chapeco.sc.gov.br/'
     },
     {
         src: logoUffs,
         alt: 'Logo UFFS',
-        href: 'https://google.com'
+        href: 'https://www.uffs.edu.br/'
     },
     {
         src: logoUnochapeco,
         alt: 'Logo Unochapecó',
-        href: 'https://google.com'
+        href: 'https://www.unochapeco.edu.br/'
     }
 ];

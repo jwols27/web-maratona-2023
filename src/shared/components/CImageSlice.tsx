@@ -9,7 +9,7 @@ interface IImageComponentProps {
     enlarge?: boolean;
 }
 
-type TCustomImageProps = IImageComponentProps &
+export type TCustomImageProps = IImageComponentProps &
     React.ImgHTMLAttributes<HTMLImageElement>;
 
 const ImageComponent: React.FC<TCustomImageProps> = ({

@@ -79,7 +79,7 @@ export const TimesCCL: React.FC<CCLComponentProps> = ({ mediaQuery }) => {
                 >
                     <Grid item>
                         <CParagraph component={'p'}>
-                            <b>INSCRIÇÕES ATÉ ??/??/2023.</b>
+                            <b>INSCRIÇÕES ATÉ 10/09/2023.</b>
                             <br />
                             Esse ano teremos novamente inscrição para times Café
                             com Leite (CCL). O valor da inscrição é R$ 150 por

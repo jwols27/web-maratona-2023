@@ -1,5 +1,4 @@
-.thumbnail {
-    opacity: 1 !important;
+.thumbnail img, .thumbnail-link {
     z-index: 999;
     cursor: pointer;
     -webkit-transition-property: all;
@@ -7,10 +6,10 @@
     -webkit-transition-timing-function: ease;
 }
 
-.thumbnail:hover {
+.thumbnail:hover img, .thumbnail-link:hover {
     transform: scale(1.125);
 }
 
-.thumbnail-link a {
+.thumbnail a {
     opacity: 1 !important;
 }

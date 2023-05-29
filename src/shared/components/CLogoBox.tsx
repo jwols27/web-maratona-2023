@@ -38,6 +38,7 @@ export const CLogoBox: React.FC<ICLogoBoxProps> = ({
             px={{ sm: 4, md: 0, xl: 2, xxl: 4 }}
             border={borderWidth}
             borderColor={borderColor}
+            rowSpacing={itemsPerRow < logos.length ? 5 : undefined}
         >
             {logos.map((logo, index) => (
                 <Grid
@@ -47,17 +48,12 @@ export const CLogoBox: React.FC<ICLogoBoxProps> = ({
                     display={'flex'}
                     justifyContent={'center'}
                     p={1}
+                    className={enlargeOnHover ? 'thumbnail' : ''}
                 >
-                    <a
-                        href={logo.href}
-                        target={'_blank'}
-                        rel={'noreferrer'}
-                        style={{ opacity: 1 }}
-                    >
+                    <a href={logo.href} target={'_blank'} rel={'noreferrer'}>
                         <img
                             src={logo.src}
                             alt={logo.alt}
-                            className={enlargeOnHover ? 'thumbnail' : ''}
                             style={{
                                 objectFit: 'contain',
                                 maxWidth: '100%'

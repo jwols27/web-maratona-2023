@@ -50,7 +50,7 @@ export const FormeSeuTime = () => {
                 </CTitle>
                 <CParagraph borderColor={'tertiary.main'}>
                     O representante do time (coach) deverá realizar as
-                    inscrições até dia <b>??/??/2023</b>.<br />
+                    inscrições até dia <b>15/08/2023</b>.<br />
                     Ele deverá:
                     <ol className={'custom-list special-link'}>
                         <li>

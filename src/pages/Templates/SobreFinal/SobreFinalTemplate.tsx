@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid } from '@mui/material';
+import { Box, Grid } from '@mui/material';
 
 import { FinalPrincipal } from './components/FinalPrincipal';
 import {
@@ -18,15 +18,19 @@ export const SobreFinalTemplate = () => {
     return (
         <div id={'sobre-a-final'}>
             <FinalPrincipal />
-            <CBanner
-                src={campus}
-                alt={'Câmpus'}
-                style={{
-                    objectFit: 'cover',
-                    height: '350px',
-                    filter: 'grayscale(100%)'
-                }}
-            />
+            <FadeInSection>
+                <Box width={'100%'}>
+                    <CBanner
+                        src={campus}
+                        alt={'Câmpus'}
+                        style={{
+                            objectFit: 'cover',
+                            height: '350px',
+                            filter: 'grayscale(100%)'
+                        }}
+                    />
+                </Box>
+            </FadeInSection>
             <FadeInSection>
                 <Grid container direction={'row'}>
                     <Grid item xs={12} lg={6}>

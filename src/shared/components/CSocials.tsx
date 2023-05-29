@@ -1,14 +1,13 @@
 import React from 'react';
 
 import '../../shared/styles/thumbnail.css';
-import { Facebook, Instagram, WhatsApp, YouTube } from '@mui/icons-material';
+import { Facebook, Instagram, YouTube } from '@mui/icons-material';
 
 interface ICSocialsProps {
     color: string;
     spaceInBetween?: string | number;
     showFacebook?: boolean;
     showInstagram?: boolean;
-    showWhatsapp?: boolean;
     showYoutube?: boolean;
 }
 
@@ -17,14 +16,13 @@ export const CSocials: React.FC<ICSocialsProps> = ({
     spaceInBetween = 0,
     showFacebook,
     showYoutube,
-    showWhatsapp,
     showInstagram
 }) => {
     return (
-        <div style={{ marginTop: 4 }} className={'thumbnail-link'}>
+        <div style={{ marginTop: 4 }} className={'thumbnail'}>
             {showFacebook && (
                 <a
-                    href={'https://www.google.com'}
+                    href={'https://pt-br.facebook.com/maratona'}
                     target={'_blank'}
                     rel="noreferrer"
                     style={{
@@ -33,12 +31,12 @@ export const CSocials: React.FC<ICSocialsProps> = ({
                         color: color
                     }}
                 >
-                    <Facebook className={'thumbnail'} fontSize={'large'} />
+                    <Facebook className={'thumbnail-link'} fontSize={'large'} />
                 </a>
             )}
             {showInstagram && (
                 <a
-                    href={'https://www.google.com'}
+                    href={'https://www.instagram.com/maratonadeprogramacao'}
                     target={'_blank'}
                     rel="noreferrer"
                     style={{
@@ -47,26 +45,15 @@ export const CSocials: React.FC<ICSocialsProps> = ({
                         color: color
                     }}
                 >
-                    <Instagram className={'thumbnail'} fontSize={'large'} />
-                </a>
-            )}
-            {showWhatsapp && (
-                <a
-                    href={'https://www.google.com'}
-                    target={'_blank'}
-                    rel="noreferrer"
-                    style={{
-                        padding: 1,
-                        marginRight: spaceInBetween,
-                        color: color
-                    }}
-                >
-                    <WhatsApp className={'thumbnail'} fontSize={'large'} />
+                    <Instagram
+                        className={'thumbnail-link'}
+                        fontSize={'large'}
+                    />
                 </a>
             )}
             {showYoutube && (
                 <a
-                    href={'https://www.google.com'}
+                    href={'https://www.youtube.com/c/maratonasbc'}
                     target={'_blank'}
                     rel="noreferrer"
                     style={{
@@ -75,7 +62,7 @@ export const CSocials: React.FC<ICSocialsProps> = ({
                         color: color
                     }}
                 >
-                    <YouTube className={'thumbnail'} fontSize={'large'} />
+                    <YouTube className={'thumbnail-link'} fontSize={'large'} />
                 </a>
             )}
         </div>
