@@ -1,6 +1,6 @@
 .fade-in-div {
     opacity: 0;
-    transform: translate(0, 50%);
+    transform: translate(0, 20%);
     visibility: hidden;
     transition: opacity 500ms ease-out, transform 500ms ease-out;
     will-change: opacity, visibility;

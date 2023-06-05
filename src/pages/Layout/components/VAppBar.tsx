@@ -45,6 +45,8 @@ export const VAppBar: React.FC<IVAppBarProps> = ({
     const mdDown = useMediaQuery(theme.breakpoints.down('md'));
     const trigger = useScrollTrigger();
 
+    // https://maratona.sbc.org.br/index.html
+
     return (
         <Slide appear={false} direction={'down'} in={!trigger}>
             <StyledAppBar isVisible={isVisible}>
@@ -58,8 +60,14 @@ export const VAppBar: React.FC<IVAppBarProps> = ({
                     {!mdDown && (
                         <>
                             <Grid item height={'100%'} width={125}>
-                                <Tooltip title={'Voltar ao início'} arrow>
-                                    <Link to={'/'}>
+                                <Tooltip title={'Website da maratona'} arrow>
+                                    <a
+                                        href={
+                                            'https://maratona.sbc.org.br/index.html'
+                                        }
+                                        target={'_blank'}
+                                        rel={'noreferrer'}
+                                    >
                                         <LogoMaratonaSBC
                                             color2={
                                                 !isVisible
@@ -68,11 +76,17 @@ export const VAppBar: React.FC<IVAppBarProps> = ({
                                             }
                                             invert={!isVisible}
                                         />
-                                    </Link>
+                                    </a>
                                 </Tooltip>
                             </Grid>
                             <Grid item ml={4} height={'100%'} width={95}>
-                                <LogoMaratonaChapeco invert={!isVisible} />
+                                <Tooltip title={'Voltar ao início'}>
+                                    <Link to={'/'}>
+                                        <LogoMaratonaChapeco
+                                            invert={!isVisible}
+                                        />
+                                    </Link>
+                                </Tooltip>
                             </Grid>
                         </>
                     )}

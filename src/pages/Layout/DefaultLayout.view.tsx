@@ -32,6 +32,7 @@ const DefaultLayout: React.FC<IDefaultLayoutProps> = ({ children }) => {
 
     // altera título da web de acordo com a página
     React.useEffect(() => {
+        window.scrollTo(0, 0);
         const title = navItems.find((obj) => {
             return obj.path === path;
         });
@@ -69,7 +70,7 @@ const DefaultLayout: React.FC<IDefaultLayoutProps> = ({ children }) => {
                         src={mdDown ? mobileBanner : mainBanner}
                         alt={'Banner'}
                         style={{
-                            height: '100vh'
+                            height: 'auto'
                         }}
                     />
                 )}

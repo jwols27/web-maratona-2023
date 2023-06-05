@@ -37,16 +37,17 @@ export const SobreFinalTemplate = () => {
                         <CTextSlice
                             px={{ xs: 4, md: 8, lg: 10, xl: 14 }}
                             noShadow
+                            bgcolor={'primary.main'}
                         >
                             <CTitle
                                 variant={'h3'}
                                 textTransform={'uppercase'}
                                 fontWeight={950}
-                                color={'secondary.main'}
+                                contrastText
                             >
                                 Organização
                             </CTitle>
-                            <CParagraph>
+                            <CParagraph contrastText>
                                 A organização será realizada por um comitê
                                 formado entre universidades, associação de
                                 empresas e governo municipal.
@@ -59,6 +60,18 @@ export const SobreFinalTemplate = () => {
                                 Comunicação (NTIC) e o Pólo Tecnológico do Oeste
                                 Catarinense (DEATEC-ACATE).
                             </CParagraph>
+                            <Box
+                                mt={3}
+                                height={{ xs: 400, md: 300 }}
+                                width={'100%'}
+                            >
+                                <iframe
+                                    title={'maratona'}
+                                    height={'100%'}
+                                    width={'100%'}
+                                    src="https://www.youtube.com/embed/XyLn3g4RB8Y"
+                                />
+                            </Box>
                         </CTextSlice>
                     </Grid>
                     <Grid

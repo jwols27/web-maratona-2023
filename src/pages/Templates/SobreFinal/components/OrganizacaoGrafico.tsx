@@ -1,18 +1,18 @@
 import React from 'react';
-import { CBalloon } from '../../../../shared/components';
+import { Grid, GridProps, useMediaQuery, useTheme } from '@mui/material';
+import { CBalloon, TLogoBoxImage } from '../../../../shared/components';
 
-import logo from '../../../../shared/assets/logos/logo-unoesc-branca.png';
 import '../organizacao.styles.css';
 import '../../../../shared/styles/thumbnail.css';
-import { Grid, GridProps, useMediaQuery, useTheme } from '@mui/material';
+
 import { logos } from '../../data/logos';
+import logo from '../../../../shared/assets/logos/logo-unoesc-branca.png';
 
 interface IOrganizacaoProps {
     orgHorizontal?: 'left' | 'right';
     orgVertical?: 'column' | 'column-reverse' | 'row' | 'row-reverse';
     boxDistance: number;
-    src: string;
-    alt: string;
+    logo: TLogoBoxImage;
     orgHeight: number;
     lineWidth?: number;
 }
@@ -23,8 +23,7 @@ const OrganizacaoBox: React.FC<IOrganizacaoProps & GridProps> = ({
     lineWidth = 0,
     boxDistance,
     orgHeight,
-    src,
-    alt,
+    logo,
     ...props
 }) => {
     return (
@@ -51,8 +50,18 @@ const OrganizacaoBox: React.FC<IOrganizacaoProps & GridProps> = ({
                 width={0}
                 height={`calc(100% - ${orgHeight}px - 2px)`}
             />
-            <Grid item className={'box-org'} height={orgHeight}>
-                <img src={src} alt={alt} className={'thumbnail'} />
+            <Grid item className={'thumbnail'} borderColor={'inherit'}>
+                <a
+                    href={logo.href}
+                    className={'box-org'}
+                    target={'_blank'}
+                    rel={'noreferrer'}
+                    style={{
+                        height: orgHeight
+                    }}
+                >
+                    <img src={logo.src} alt={logo.alt} />
+                </a>
             </Grid>
         </Grid>
     );
@@ -64,30 +73,36 @@ export const OrganizacaoGrafico = () => {
     return (
         <>
             <CBalloon size={125} color={theme.palette.secondary.main}>
-                <img
-                    src={logo}
-                    alt={'Logo UNOESC'}
-                    className={'thumbnail'}
-                    style={{
-                        margin: 'auto',
-                        width: '75%'
-                    }}
-                />
+                <div className={'balloon thumbnail'}>
+                    <a
+                        href={'https://www.unoesc.edu.br/'}
+                        target={'_blank'}
+                        rel={'noreferrer'}
+                        className={'balloon'}
+                    >
+                        <img
+                            src={logo}
+                            alt={'Logo UNOESC'}
+                            style={{
+                                margin: 'auto',
+                                width: '75%'
+                            }}
+                        />
+                    </a>
+                </div>
             </CBalloon>
 
             <OrganizacaoBox //acic
                 orgVertical={'column-reverse'}
                 boxDistance={200}
                 orgHeight={90}
-                src={logos[4].src}
-                alt={logos[4].alt}
+                logo={logos[4]}
                 mb={25}
             />
             <OrganizacaoBox //deatec
                 orgVertical={'column-reverse'}
                 boxDistance={smDown ? 120 : 90}
-                src={logos[5].src}
-                alt={logos[5].alt}
+                logo={logos[5]}
                 orgHeight={65}
                 lineWidth={160}
                 mb={smDown ? 15 : 10}
@@ -111,12 +126,19 @@ export const OrganizacaoGrafico = () => {
                     height={0}
                     width={smDown ? 30 : 80}
                 />
-                <Grid item className={'box-org'} height={smDown ? 55 : 60}>
-                    <img
-                        src={logos[6].src}
-                        alt={logos[6].alt}
-                        className={'thumbnail'}
-                    />
+
+                <Grid item className={'thumbnail'} borderColor={'inherit'}>
+                    <a
+                        href={logos[6].href}
+                        className={'box-org'}
+                        target={'_blank'}
+                        rel={'noreferrer'}
+                        style={{
+                            height: smDown ? 55 : 60
+                        }}
+                    >
+                        <img src={logos[6].src} alt={logos[6].alt} />
+                    </a>
                 </Grid>
             </Grid>
 
@@ -139,12 +161,19 @@ export const OrganizacaoGrafico = () => {
                     mb={`110px`}
                 />
                 <Grid item className={'box-line'} height={0} width={40} />
-                <Grid item className={'box-org'} height={smDown ? 70 : 80}>
-                    <img
-                        src={logos[7].src}
-                        alt={logos[7].alt}
-                        className={'thumbnail'}
-                    />
+
+                <Grid item className={'thumbnail'} borderColor={'inherit'}>
+                    <a
+                        href={logos[7].href}
+                        className={'box-org'}
+                        target={'_blank'}
+                        rel={'noreferrer'}
+                        style={{
+                            height: smDown ? 70 : 80
+                        }}
+                    >
+                        <img src={logos[7].src} alt={logos[7].alt} />
+                    </a>
                 </Grid>
             </Grid>
 
@@ -152,8 +181,7 @@ export const OrganizacaoGrafico = () => {
                 boxDistance={125}
                 lineWidth={160}
                 orgHeight={75}
-                src={logos[8].src}
-                alt={logos[8].alt}
+                logo={logos[8]}
                 mt={25}
                 mr={smDown ? 30 : 40}
             />
@@ -163,8 +191,7 @@ export const OrganizacaoGrafico = () => {
                 boxDistance={125}
                 lineWidth={160}
                 orgHeight={80}
-                src={logos[9].src}
-                alt={logos[9].alt}
+                logo={logos[9]}
                 mb={25}
                 ml={smDown ? 22 : 32}
             />
