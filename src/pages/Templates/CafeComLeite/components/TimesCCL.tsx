@@ -92,6 +92,7 @@ export const TimesCCL: React.FC<CCLComponentProps> = ({ mediaQuery }) => {
                         </CParagraph>
                     </Grid>
                     <Grid
+                        container
                         item
                         bgcolor={'primary.main'}
                         mt={2}
@@ -106,16 +107,15 @@ export const TimesCCL: React.FC<CCLComponentProps> = ({ mediaQuery }) => {
                             borderColor={'tertiary.main'}
                         >
                             Para se inscrever como café-com-leite, acesse o
-                            Sistema SBC ECOS em
-                            <br />
+                            Sistema SBC ECOS{' '}
                             <a
                                 href={
-                                    'https://centraldesistemas.sbc.org.br/ecos/finalmaratonasbc2022/edit'
+                                    'https://centraldesistemas.sbc.org.br/ecos/finalmaratonasbc2023/'
                                 }
                                 target={'_blank'}
                                 rel={'noreferrer'}
                             >
-                                https://centraldesistemas.sbc.org.br/ecos/finalmaratonasbc2022/edit
+                                clicando aqui!
                             </a>
                         </CParagraph>
                     </Grid>

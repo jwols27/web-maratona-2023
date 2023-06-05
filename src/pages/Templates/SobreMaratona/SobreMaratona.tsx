@@ -40,7 +40,7 @@ export const SobreMaratona = () => {
                             title={'maratona'}
                             height={'100%'}
                             width={'100%'}
-                            src="https://www.youtube.com/embed/XyLn3g4RB8Y"
+                            src="https://www.youtube.com/embed/tgFBqtzW6Oc"
                         />
                     </Box>
                 </CTextSlice>

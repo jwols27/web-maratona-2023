@@ -88,16 +88,15 @@ export const Visitantes: React.FC<CCLComponentProps> = ({ mediaQuery }) => {
                             borderColor={'tertiary.main'}
                         >
                             Para se inscrever como visistante, acesse o Sistema
-                            SBC ECOS em
-                            <br />
+                            SBC ECOS{' '}
                             <a
                                 href={
-                                    'https://centraldesistemas.sbc.org.br/ecos/finalmaratonasbc2022/edit'
+                                    'https://centraldesistemas.sbc.org.br/ecos/finalmaratonasbc2023/'
                                 }
                                 target={'_blank'}
                                 rel={'noreferrer'}
                             >
-                                https://centraldesistemas.sbc.org.br/ecos/finalmaratonasbc2022/edit
+                                clicando aqui!
                             </a>
                         </CParagraph>
                     </Grid>
