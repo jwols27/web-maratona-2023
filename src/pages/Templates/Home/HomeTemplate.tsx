@@ -10,9 +10,7 @@ import { SobreMaratona } from '../SobreMaratona/SobreMaratona';
 export const HomeTemplate = () => {
     return (
         <div id={'home'}>
-            <FadeInSection>
-                <SobreMaratona />
-            </FadeInSection>
+            <SobreMaratona />
 
             <FadeInSection>
                 <CronogramaTitle />
