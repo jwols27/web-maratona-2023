@@ -6,6 +6,10 @@ a:hover { text-decoration: none; opacity: .75; }
 
 a:active { text-decoration: none; }
 
+.link-override a:hover{
+    opacity: 1 !important;
+}
+
 .custom-list {
     padding: 0 0 0 1rem;
     margin: 0;

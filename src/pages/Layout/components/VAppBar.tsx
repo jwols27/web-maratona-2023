@@ -15,9 +15,9 @@ import { Link } from 'react-router-dom';
 
 import { CSocials } from '../../../shared/components';
 import { LogoMaratonaChapeco } from '../../../shared/icons/LogoMaratonaChapeco';
+import { LogoMaratonaSBC } from '../../../shared/icons/LogoMaratonaSBC';
 
 import '../layout.css';
-import { LogoMaratonaSBC } from '../../../shared/icons/LogoMaratonaSBC';
 
 interface IVAppBarProps {
     handleDrawer: (b: boolean) => void;
@@ -45,7 +45,12 @@ export const VAppBar: React.FC<IVAppBarProps> = ({
     const mdDown = useMediaQuery(theme.breakpoints.down('md'));
     const trigger = useScrollTrigger();
 
-    // https://maratona.sbc.org.br/index.html
+    const handleChapeco = () => {
+        const element = document.getElementById('header');
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
     return (
         <Slide appear={false} direction={'down'} in={!trigger}>
@@ -56,11 +61,12 @@ export const VAppBar: React.FC<IVAppBarProps> = ({
                     alignItems={'center'}
                     py={4}
                     pl={{ xs: 2, sm: 6, md: 10, lg: 14 }}
+                    className={isVisible ? 'link-override' : ''}
                 >
                     {!mdDown && (
                         <>
                             <Grid item height={'100%'} width={125}>
-                                <Tooltip title={'Website da maratona'} arrow>
+                                <Tooltip title={'Página da maratona'} arrow>
                                     <a
                                         href={
                                             'https://maratona.sbc.org.br/index.html'
@@ -80,8 +86,8 @@ export const VAppBar: React.FC<IVAppBarProps> = ({
                                 </Tooltip>
                             </Grid>
                             <Grid item ml={4} height={'100%'} width={95}>
-                                <Tooltip title={'Voltar ao início'}>
-                                    <Link to={'/'}>
+                                <Tooltip title={'Voltar ao início'} arrow>
+                                    <Link to={''} onClick={handleChapeco}>
                                         <LogoMaratonaChapeco
                                             invert={!isVisible}
                                         />

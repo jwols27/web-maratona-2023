@@ -1,5 +1,5 @@
 import React from 'react';
-import ErrorView from './pages/Error/Error.view';
+import ErrorView from './pages/Fallback/Error.view';
 import {
     AcomodacoesTurismo,
     ComoParticiparTemplate,
