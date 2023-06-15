@@ -67,7 +67,7 @@ export const FormeSeuTime = () => {
                             providenciar o pagamento da inscrição{' '}
                             <a
                                 href={
-                                    'https://centraldesistemas.sbc.org.br/ecos/maratonasbc2022/' // TODO: checar se precisa atualizar esse site
+                                    'https://centraldesistemas.sbc.org.br/ecos/maratonasbc2023/'
                                 }
                                 target={'_blank'}
                                 rel={'noreferrer'}

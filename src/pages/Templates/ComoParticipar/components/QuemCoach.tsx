@@ -41,7 +41,9 @@ export const QuemCoach = () => {
                         <br />
                         Confira as{' '}
                         <a
-                            href={'https://maratona.sbc.org.br/sobre22.html'}
+                            href={
+                                'https://maratona.sbc.org.br/sobre/regras.html'
+                            }
                             target={'_blank'}
                             rel={'noreferrer'}
                         >
