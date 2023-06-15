@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.73ea0164.css",
-    "main.js": "/static/js/main.b106e0cc.js",
+    "main.js": "/static/js/main.9b0347f0.js",
     "static/media/maratona2022.jpeg": "/static/media/maratona2022.99fcddcb7b74afc30404.jpeg",
     "static/media/tabuti.jpg": "/static/media/tabuti.e0afa5fa55ed1773dc18.jpg",
     "static/media/main-banner.png": "/static/media/main-banner.c5ab9235a407c8f3b023.png",
@@ -25,10 +25,10 @@
     "static/media/revicons.woff": "/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/index.html",
     "main.73ea0164.css.map": "/static/css/main.73ea0164.css.map",
-    "main.b106e0cc.js.map": "/static/js/main.b106e0cc.js.map"
+    "main.9b0347f0.js.map": "/static/js/main.9b0347f0.js.map"
   },
   "entrypoints": [
     "static/css/main.73ea0164.css",
-    "static/js/main.b106e0cc.js"
+    "static/js/main.9b0347f0.js"
   ]
 }
