@@ -31,8 +31,7 @@ export const Perfil: React.FC<IPerfilProps & GridProps> = ({
                     alt={nome}
                     sx={{
                         width: '100%',
-                        height: '100%',
-                        objectFit: 'cover'
+                        height: '100%'
                     }}
                 />
             </Grid>
