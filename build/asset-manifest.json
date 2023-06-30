@@ -1,11 +1,12 @@
 {
   "files": {
     "main.css": "/static/css/main.73ea0164.css",
-    "main.js": "/static/js/main.9b0347f0.js",
+    "main.js": "/static/js/main.a670ea7b.js",
     "static/media/maratona2022.jpeg": "/static/media/maratona2022.99fcddcb7b74afc30404.jpeg",
-    "static/media/tabuti.jpg": "/static/media/tabuti.e0afa5fa55ed1773dc18.jpg",
+    "static/media/meza.png": "/static/media/meza.03bc420adc33b3f1a26b.png",
     "static/media/main-banner.png": "/static/media/main-banner.c5ab9235a407c8f3b023.png",
     "static/media/small-banner.png": "/static/media/small-banner.72d49f699db112e6c5b7.png",
+    "static/media/tabuti.jpg": "/static/media/tabuti.ace8154af491569a7e75.jpg",
     "static/media/campus.jpg": "/static/media/campus.f56072d734841f5e5ece.jpg",
     "static/media/footer-icpc.png": "/static/media/footer-icpc.adfb590d84e53018269f.png",
     "static/media/zonta.jpg": "/static/media/zonta.58614eb6794913d0f1d8.jpg",
@@ -13,11 +14,15 @@
     "static/media/nerd-ruivo.png": "/static/media/nerd-ruivo.01870505353e87d6cdb6.png",
     "static/media/hotel-mogano.jpg": "/static/media/hotel-mogano.9bbe2b64691a32fe5d96.jpg",
     "static/media/hotel-lang.webp": "/static/media/hotel-lang.b6e9f73e72c31e27839e.webp",
-    "static/media/juliana.jpg": "/static/media/juliana.9de4962afe0bd56fee82.jpg",
+    "static/media/juliana.jpg": "/static/media/juliana.2be5dc1849c6b43d015e.jpg",
     "static/media/lanche.png": "/static/media/lanche.dc813074f0d89143d6c6.png",
+    "static/media/paulo_costa.jpg": "/static/media/paulo_costa.203fa893e22bfe5f0149.jpg",
     "static/media/coffee-shield.png": "/static/media/coffee-shield.8c2982871df1d17c1c1b.png",
+    "static/media/vinicius_santos.jpeg": "/static/media/vinicius_santos.d1366f5f0f8652581fd5.jpeg",
     "static/media/logo-prefeitura.png": "/static/media/logo-prefeitura.b7e16e59d5e89bc98701.png",
+    "static/media/ferreira.jpg": "/static/media/ferreira.2fe39bd21b04d0c87052.jpg",
     "static/media/logo-maratona.png": "/static/media/logo-maratona.40d8c6cd20887b8265cf.png",
+    "static/media/ribas.jpg": "/static/media/ribas.85986acc6e8d825f82a6.jpg",
     "static/media/revicons.eot": "/static/media/revicons.a77de540a38981833f9e.eot",
     "static/media/revicons.ttf": "/static/media/revicons.57fd05d4ae650374c8de.ttf",
     "static/media/logo-sbc.png": "/static/media/logo-sbc.aa7bbc204d63f49d117a.png",
@@ -25,10 +30,10 @@
     "static/media/revicons.woff": "/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/index.html",
     "main.73ea0164.css.map": "/static/css/main.73ea0164.css.map",
-    "main.9b0347f0.js.map": "/static/js/main.9b0347f0.js.map"
+    "main.a670ea7b.js.map": "/static/js/main.a670ea7b.js.map"
   },
   "entrypoints": [
     "static/css/main.73ea0164.css",
-    "static/js/main.9b0347f0.js"
+    "static/js/main.a670ea7b.js"
   ]
 }
