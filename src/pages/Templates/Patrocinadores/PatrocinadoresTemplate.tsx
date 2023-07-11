@@ -1,5 +1,12 @@
 import React from 'react';
-import { Box, Divider, Grid, Typography } from '@mui/material';
+import {
+    Box,
+    Divider,
+    Grid,
+    Typography,
+    useMediaQuery,
+    useTheme
+} from '@mui/material';
 
 import {
     CHeader,
@@ -9,7 +16,38 @@ import {
 } from '../../../shared/components';
 import { logos } from '../data/logos';
 
+interface IPatrocinadoresRowProps {
+    title: string;
+    titleColor: string;
+    children: React.ReactNode;
+}
+
+const PatrocinadoresRow: React.FC<IPatrocinadoresRowProps> = ({
+    title,
+    titleColor,
+    children
+}) => {
+    return (
+        <FadeInSection>
+            <Box mb={8} width={'100%'}>
+                <CHeader contrastText boxColor={titleColor}>
+                    <Typography
+                        variant={'h3'}
+                        textTransform={'uppercase'}
+                        fontWeight={950}
+                    >
+                        {title}
+                    </Typography>
+                </CHeader>
+                <Box p={4}>{children}</Box>
+            </Box>
+        </FadeInSection>
+    );
+};
+
 export const PatrocinadoresTemplate = () => {
+    const theme = useTheme();
+    const mdDown = useMediaQuery(theme.breakpoints.down('md'));
     return (
         <Box>
             <FadeInSection>
@@ -51,26 +89,23 @@ export const PatrocinadoresTemplate = () => {
                     </Grid>
                 </Box>
             </FadeInSection>
-            <FadeInSection>
-                <Box mb={4} minHeight={'35vh'} width={'100%'}>
-                    <CHeader contrastText boxColor={'secondary.main'}>
-                        <Typography
-                            variant={'h3'}
-                            textTransform={'uppercase'}
-                            fontWeight={950}
-                        >
-                            Apoio
-                        </Typography>
-                    </CHeader>
-                    <Box p={4}>
-                        <CLogoBox
-                            logos={logos.slice(4, 10)}
-                            itemsPerRow={3}
-                            enlargeOnHover
-                        />
-                    </Box>
-                </Box>
-            </FadeInSection>
+
+            <PatrocinadoresRow title={'Prata'} titleColor={'slategray'}>
+                <CLogoBox
+                    logos={logos.slice(10, 12)}
+                    itemsPerRow={mdDown ? 2 : 4}
+                    enlargeOnHover
+                    columnSpacing={10}
+                />
+            </PatrocinadoresRow>
+
+            <PatrocinadoresRow title={'Apoio'} titleColor={'secondary.main'}>
+                <CLogoBox
+                    logos={logos.slice(4, 10)}
+                    itemsPerRow={3}
+                    enlargeOnHover
+                />
+            </PatrocinadoresRow>
         </Box>
     );
 };

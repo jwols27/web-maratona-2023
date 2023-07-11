@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid } from '@mui/material';
+import { Grid, GridProps } from '@mui/material';
 
 import '../styles/thumbnail.css';
 
@@ -12,33 +12,28 @@ export type TLogoBoxImage = {
 interface ICLogoBoxProps {
     logos: TLogoBoxImage[];
     itemsPerRow?: number;
-    borderColor?: string;
-    borderWidth?: number;
     enlargeOnHover?: boolean;
-    xs?: number;
 }
 
-export const CLogoBox: React.FC<ICLogoBoxProps> = ({
+export const CLogoBox: React.FC<ICLogoBoxProps & GridProps> = ({
     logos,
     itemsPerRow = 3,
-    borderColor = 'transparent',
-    borderWidth = 2,
     enlargeOnHover,
-    xs = 12
+    ...props
 }) => {
     return (
         <Grid
             item
-            xs={xs}
+            xs={12}
             container
-            direction={'row'}
             justifyContent={'center'}
             alignItems={'center'}
             py={{ sm: 2, md: 0, xl: 1, xxl: 2 }}
             px={{ sm: 4, md: 0, xl: 2, xxl: 4 }}
-            border={borderWidth}
-            borderColor={borderColor}
+            border={2}
+            borderColor={'transparent'}
             rowSpacing={itemsPerRow < logos.length ? 5 : undefined}
+            {...props}
         >
             {logos.map((logo, index) => (
                 <Grid
