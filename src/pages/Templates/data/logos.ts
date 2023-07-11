@@ -8,6 +8,8 @@ import LogoPollen from '../../../shared/assets/logos/logo-pollen.png';
 import logoPrefeitura from '../../../shared/assets/logos/logo-prefeitura.png';
 import logoUffs from '../../../shared/assets/logos/logo-uffs.png';
 import logoUnochapeco from '../../../shared/assets/logos/logo-unochapeco.png';
+import logoNstech from '../../../shared/assets/logos/logo-nstech.png';
+import logoOneVC from '../../../shared/assets/logos/logo-onevc.png';
 
 import { TLogoBoxImage } from '../../../shared/components';
 
@@ -61,5 +63,15 @@ export const logos: TLogoBoxImage[] = [
         src: logoUnochapeco,
         alt: 'Logo Unochapecó',
         href: 'https://www.unochapeco.edu.br/'
+    },
+    {
+        src: logoNstech,
+        alt: 'Logo nstech',
+        href: 'https://www.nstech.com.br/'
+    },
+    {
+        src: logoOneVC,
+        alt: 'Logo ONEVC',
+        href: 'https://www.onevc.vc/'
     }
 ];
