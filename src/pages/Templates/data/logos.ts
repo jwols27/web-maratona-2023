@@ -10,6 +10,7 @@ import logoUffs from '../../../shared/assets/logos/logo-uffs.png';
 import logoUnochapeco from '../../../shared/assets/logos/logo-unochapeco.png';
 import logoNstech from '../../../shared/assets/logos/logo-nstech.png';
 import logoOneVC from '../../../shared/assets/logos/logo-onevc.png';
+import logoFapesc from '../../../shared/assets/logos/logo-fapesc.png';
 
 import { TLogoBoxImage } from '../../../shared/components';
 
@@ -73,5 +74,10 @@ export const logos: TLogoBoxImage[] = [
         src: logoOneVC,
         alt: 'Logo ONEVC',
         href: 'https://www.onevc.vc/'
+    },
+    {
+        src: logoFapesc,
+        alt: 'Logo Fapesc',
+        href: 'https://fapesc.sc.gov.br/'
     }
 ];

@@ -1,12 +1,13 @@
 {
   "files": {
     "main.css": "/static/css/main.73ea0164.css",
-    "main.js": "/static/js/main.3f16e2ae.js",
+    "main.js": "/static/js/main.c4b1cbf2.js",
     "static/media/maratona2022.jpeg": "/static/media/maratona2022.99fcddcb7b74afc30404.jpeg",
     "static/media/meza.png": "/static/media/meza.03bc420adc33b3f1a26b.png",
     "static/media/main-banner.png": "/static/media/main-banner.c5ab9235a407c8f3b023.png",
     "static/media/small-banner.png": "/static/media/small-banner.72d49f699db112e6c5b7.png",
     "static/media/tabuti.jpg": "/static/media/tabuti.ace8154af491569a7e75.jpg",
+    "static/media/logo-fapesc.png": "/static/media/logo-fapesc.86cf7754621c0871bb5d.png",
     "static/media/campus.jpg": "/static/media/campus.f56072d734841f5e5ece.jpg",
     "static/media/footer-icpc.png": "/static/media/footer-icpc.adfb590d84e53018269f.png",
     "static/media/zonta.jpg": "/static/media/zonta.58614eb6794913d0f1d8.jpg",
@@ -31,10 +32,10 @@
     "static/media/revicons.woff": "/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/index.html",
     "main.73ea0164.css.map": "/static/css/main.73ea0164.css.map",
-    "main.3f16e2ae.js.map": "/static/js/main.3f16e2ae.js.map"
+    "main.c4b1cbf2.js.map": "/static/js/main.c4b1cbf2.js.map"
   },
   "entrypoints": [
     "static/css/main.73ea0164.css",
-    "static/js/main.3f16e2ae.js"
+    "static/js/main.c4b1cbf2.js"
   ]
 }

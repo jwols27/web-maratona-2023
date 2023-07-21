@@ -95,7 +95,9 @@ export const PatrocinadoresTemplate = () => {
                     logos={logos.slice(10, 12)}
                     itemsPerRow={mdDown ? 2 : 4}
                     enlargeOnHover
-                    columnSpacing={10}
+                    imageMaxWidth={250}
+                    rowGap={1}
+                    columnGap={8}
                 />
             </PatrocinadoresRow>
 
@@ -104,6 +106,18 @@ export const PatrocinadoresTemplate = () => {
                     logos={logos.slice(4, 10)}
                     itemsPerRow={3}
                     enlargeOnHover
+                />
+            </PatrocinadoresRow>
+
+            <PatrocinadoresRow
+                title={'Apoio Institucional'}
+                titleColor={'secondary.dark'}
+            >
+                <CLogoBox
+                    logos={logos.slice(12, 13)}
+                    itemsPerRow={1}
+                    enlargeOnHover
+                    imageMaxWidth={450}
                 />
             </PatrocinadoresRow>
         </Box>

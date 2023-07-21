@@ -13,12 +13,14 @@ interface ICLogoBoxProps {
     logos: TLogoBoxImage[];
     itemsPerRow?: number;
     enlargeOnHover?: boolean;
+    imageMaxWidth?: number;
 }
 
 export const CLogoBox: React.FC<ICLogoBoxProps & GridProps> = ({
     logos,
     itemsPerRow = 3,
     enlargeOnHover,
+    imageMaxWidth = 300,
     ...props
 }) => {
     return (
@@ -45,7 +47,12 @@ export const CLogoBox: React.FC<ICLogoBoxProps & GridProps> = ({
                     p={1}
                     className={enlargeOnHover ? 'thumbnail' : ''}
                 >
-                    <a href={logo.href} target={'_blank'} rel={'noreferrer'}>
+                    <a
+                        href={logo.href}
+                        target={'_blank'}
+                        rel={'noreferrer'}
+                        style={{ maxWidth: imageMaxWidth }}
+                    >
                         <img
                             src={logo.src}
                             alt={logo.alt}
