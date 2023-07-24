@@ -14,7 +14,7 @@ import {
     CTitle,
     FadeInSection
 } from '../../../shared/components';
-import { logos } from '../data/logos';
+import { patrocinadores } from '../data/logos';
 
 interface IPatrocinadoresRowProps {
     title: string;
@@ -75,14 +75,14 @@ export const PatrocinadoresTemplate = () => {
                     <Grid container justifyContent={'center'}>
                         <CLogoBox
                             xs={5.9}
-                            logos={logos.slice(0, 2)}
+                            logos={patrocinadores.realizacao}
                             itemsPerRow={2}
                             enlargeOnHover
                         />
                         <Divider flexItem orientation={'vertical'} />
                         <CLogoBox
                             xs={5.9}
-                            logos={logos.slice(2, 4)}
+                            logos={patrocinadores.organizacao}
                             itemsPerRow={2}
                             enlargeOnHover
                         />
@@ -90,9 +90,9 @@ export const PatrocinadoresTemplate = () => {
                 </Box>
             </FadeInSection>
 
-            <PatrocinadoresRow title={'Prata'} titleColor={'slategray'}>
+            <PatrocinadoresRow title={'Diamante'} titleColor={'cornflowerblue'}>
                 <CLogoBox
-                    logos={logos.slice(10, 12)}
+                    logos={patrocinadores.diamante}
                     itemsPerRow={mdDown ? 2 : 4}
                     enlargeOnHover
                     imageMaxWidth={250}
@@ -101,10 +101,21 @@ export const PatrocinadoresTemplate = () => {
                 />
             </PatrocinadoresRow>
 
+            <PatrocinadoresRow title={'Prata'} titleColor={'slategray'}>
+                <CLogoBox
+                    logos={patrocinadores.prata}
+                    itemsPerRow={mdDown ? 2 : 4}
+                    enlargeOnHover
+                    imageMaxWidth={250}
+                    rowGap={4}
+                    columnGap={8}
+                />
+            </PatrocinadoresRow>
+
             <PatrocinadoresRow title={'Apoio'} titleColor={'secondary.main'}>
                 <CLogoBox
-                    logos={logos.slice(4, 10)}
-                    itemsPerRow={3}
+                    logos={patrocinadores.apoio}
+                    itemsPerRow={mdDown ? 2 : 3}
                     enlargeOnHover
                 />
             </PatrocinadoresRow>
@@ -114,7 +125,7 @@ export const PatrocinadoresTemplate = () => {
                 titleColor={'secondary.dark'}
             >
                 <CLogoBox
-                    logos={logos.slice(12, 13)}
+                    logos={patrocinadores.apoioInstitucional}
                     itemsPerRow={1}
                     enlargeOnHover
                     imageMaxWidth={450}
