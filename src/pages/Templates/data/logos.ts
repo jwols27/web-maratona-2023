@@ -11,6 +11,7 @@ import logoUnochapeco from '../../../shared/assets/logos/logo-unochapeco.png';
 import logoNstech from '../../../shared/assets/logos/logo-nstech.png';
 import logoOneVC from '../../../shared/assets/logos/logo-onevc.png';
 import logoFapesc from '../../../shared/assets/logos/logo-fapesc.png';
+import logoStone from '../../../shared/assets/logos/logo-stone.png';
 
 import { TLogoBoxImage } from '../../../shared/components';
 
@@ -79,5 +80,19 @@ export const logos: TLogoBoxImage[] = [
         src: logoFapesc,
         alt: 'Logo Fapesc',
         href: 'https://fapesc.sc.gov.br/'
+    },
+    {
+        src: logoStone,
+        alt: 'Logo Stone',
+        href: 'https://www.stone.com.br/'
     }
 ];
+
+export const patrocinadores: Record<string, TLogoBoxImage[]> = {
+    realizacao: logos.slice(0, 2),
+    organizacao: logos.slice(2, 4),
+    diamante: [logos[13]],
+    prata: [logos[10], logos[11]],
+    apoio: [...logos.slice(4, 10)],
+    apoioInstitucional: [logos[12]]
+};
