@@ -1,9 +1,9 @@
 import React from 'react';
 import { Grid } from '@mui/material';
 
-import { CParagraph, CTextSlice, CTitle } from '../../../../shared/components';
-import { CCLComponentProps } from '../CafeComLeite';
 import { MushroomLine } from './MushroomLine';
+import { CCLComponentProps } from '../CafeComLeite';
+import { CParagraph, CTextSlice, CTitle } from '../../../../components';
 
 import lanche from '../../../../shared/assets/lanche.png';
 import redMushroom from '../../../../shared/assets/icon-mushroom-red.png';

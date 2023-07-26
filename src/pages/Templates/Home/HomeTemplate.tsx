@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { FadeInSection } from '../../../shared/components';
+import { FadeInSection } from '../../../components';
+import { SobreMaratona } from '../SobreMaratona/SobreMaratona';
 import { CronogramaResumido, CronogramaTitle } from './components';
 import { FinalPrincipal } from '../SobreFinal/components/FinalPrincipal';
 
 import './cronograma.css';
-import { SobreMaratona } from '../SobreMaratona/SobreMaratona';
 
 export const HomeTemplate = () => {
     return (

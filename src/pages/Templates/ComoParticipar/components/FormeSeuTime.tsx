@@ -1,6 +1,7 @@
-import { Box, Grid, useTheme } from '@mui/material';
-import { CParagraph, CTitle } from '../../../../shared/components';
 import React from 'react';
+import { Box, Grid, useTheme } from '@mui/material';
+
+import { CParagraph, CTitle } from '../../../../components';
 
 export const FormeSeuTime = () => {
     const theme = useTheme();

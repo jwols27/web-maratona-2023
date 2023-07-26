@@ -8,13 +8,8 @@ import {
     useTheme
 } from '@mui/material';
 
-import {
-    CHeader,
-    CLogoBox,
-    CTitle,
-    FadeInSection
-} from '../../../shared/components';
-import { patrocinadores } from '../data/logos';
+import { CHeader, CLogoBox, CTitle, FadeInSection } from '../../../components';
+import { realizacao, organizacao, patrocinadores } from '../../../data';
 
 interface IPatrocinadoresRowProps {
     title: string;
@@ -75,14 +70,14 @@ export const PatrocinadoresTemplate = () => {
                     <Grid container justifyContent={'center'}>
                         <CLogoBox
                             xs={5.9}
-                            logos={patrocinadores.realizacao}
+                            logos={realizacao}
                             itemsPerRow={2}
                             enlargeOnHover
                         />
                         <Divider flexItem orientation={'vertical'} />
                         <CLogoBox
                             xs={5.9}
-                            logos={patrocinadores.organizacao}
+                            logos={organizacao}
                             itemsPerRow={2}
                             enlargeOnHover
                         />

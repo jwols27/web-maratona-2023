@@ -1,12 +1,15 @@
 import React from 'react';
 import { Box, Grid, useTheme } from '@mui/material';
-import { TBalloon, CDescCard } from '../../../../shared/components';
+
+import { CronogramaHeader } from './CronogramaHeader';
+import { CronogramaBalloon } from './CronogramaBalloon';
+import { TBalloon, CDescCard } from '../../../../components';
+
 import mala from '../../../../shared/assets/icons/icon-mala.png';
 import camera from '../../../../shared/assets/icons/icon-camera.png';
 import baloes from '../../../../shared/assets/icons/icon-balloons.png';
 import aviao from '../../../../shared/assets/icons/icon-plane.png';
-import { CronogramaHeader } from './CronogramaHeader';
-import { CronogramaBalloon } from './CronogramaBalloon';
+
 export const CronogramaResumido = () => {
     const theme = useTheme();
     const balloon1: TBalloon = {

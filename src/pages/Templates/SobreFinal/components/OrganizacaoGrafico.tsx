@@ -1,18 +1,19 @@
 import React from 'react';
 import { Grid, GridProps, useMediaQuery, useTheme } from '@mui/material';
-import { CBalloon, TLogoBoxImage } from '../../../../shared/components';
+
+import { CBalloon } from '../../../../components';
+import { logos, TOrganizacao } from '../../../../data';
+
+import logo from '../../../../shared/assets/logos/logo-unoesc-branca.png';
 
 import '../organizacao.styles.css';
 import '../../../../shared/styles/thumbnail.css';
-
-import { logos } from '../../data/logos';
-import logo from '../../../../shared/assets/logos/logo-unoesc-branca.png';
 
 interface IOrganizacaoProps {
     orgHorizontal?: 'left' | 'right';
     orgVertical?: 'column' | 'column-reverse' | 'row' | 'row-reverse';
     boxDistance: number;
-    logo: TLogoBoxImage;
+    logo: TOrganizacao;
     orgHeight: number;
     lineWidth?: number;
 }

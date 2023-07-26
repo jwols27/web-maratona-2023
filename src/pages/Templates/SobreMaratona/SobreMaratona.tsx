@@ -1,12 +1,7 @@
 import React from 'react';
 import { Box, Grid } from '@mui/material';
-import {
-    CLogoBox,
-    CParagraph,
-    CTextSlice,
-    CTitle
-} from '../../../shared/components';
-import { logos } from '../data/logos';
+import { CLogoBox, CParagraph, CTextSlice, CTitle } from '../../../components';
+import { realizacao, organizacao } from '../../../data';
 
 export const SobreMaratona = () => {
     return (
@@ -95,14 +90,14 @@ export const SobreMaratona = () => {
                     <Grid container direction={'row'}>
                         <CLogoBox
                             xs={5.5}
-                            logos={logos.slice(0, 2)}
+                            logos={realizacao}
                             borderColor={'tertiary.main'}
                             itemsPerRow={2}
                         />
                         <Grid item xs={0.5} />
                         <CLogoBox
                             xs={5.5}
-                            logos={logos.slice(2, 4)}
+                            logos={organizacao}
                             borderColor={'tertiary.main'}
                             itemsPerRow={2}
                         />

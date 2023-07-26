@@ -1,4 +1,5 @@
 import React from 'react';
+import { RouteObject } from 'react-router-dom';
 import ErrorView from './pages/Fallback/Error.view';
 import {
     AcomodacoesTurismo,
@@ -12,13 +13,7 @@ import {
     CafeComLeite
 } from './pages/Templates';
 
-interface IRouterProps {
-    path: string;
-    element: React.ReactElement;
-    children?: IRouterProps[];
-}
-
-const routerData: IRouterProps[] = [
+const routerData: RouteObject[] = [
     //HOME
     {
         path: '',

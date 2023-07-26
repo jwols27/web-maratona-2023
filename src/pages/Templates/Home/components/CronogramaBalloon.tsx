@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Grid, useMediaQuery, useTheme } from '@mui/material';
-import { CBalloon, TBalloon } from '../../../../shared/components';
+
+import { CBalloon, TBalloon } from '../../../../components';
 
 interface ICronogramaBalloonProps {
     balloon: TBalloon;

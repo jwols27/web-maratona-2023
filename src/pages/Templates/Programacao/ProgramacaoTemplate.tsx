@@ -1,5 +1,5 @@
 import React from 'react';
-import { FadeInSection } from '../../../shared/components';
+import { FadeInSection } from '../../../components';
 import { CronogramaResumido, CronogramaTitle } from '../Home/components';
 
 export const ProgramacaoTemplate = () => {
