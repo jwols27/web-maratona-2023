@@ -1,6 +1,7 @@
 import React from 'react';
 import { Grid, useTheme } from '@mui/material';
-import { CTitle } from '../../../../shared/components';
+
+import { CTitle } from '../../../../components';
 
 export const CronogramaTitle = () => {
     const theme = useTheme();

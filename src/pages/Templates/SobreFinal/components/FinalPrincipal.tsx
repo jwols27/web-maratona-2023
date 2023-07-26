@@ -6,7 +6,7 @@ import {
     CParagraph,
     CTitle,
     TCustomImageProps
-} from '../../../../shared/components';
+} from '../../../../components';
 
 import bloons from '../../../../shared/assets/balloons.png';
 import maratona2022 from '../../../../shared/assets/maratona2022.jpeg';

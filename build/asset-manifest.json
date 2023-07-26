@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.73ea0164.css",
-    "main.js": "/static/js/main.46030a1d.js",
+    "main.css": "/static/css/main.57ff607a.css",
+    "main.js": "/static/js/main.41652069.js",
     "static/media/maratona2022.jpeg": "/static/media/maratona2022.99fcddcb7b74afc30404.jpeg",
     "static/media/meza.png": "/static/media/meza.03bc420adc33b3f1a26b.png",
     "static/media/main-banner.png": "/static/media/main-banner.c5ab9235a407c8f3b023.png",
@@ -26,17 +26,14 @@
     "static/media/ferreira.jpg": "/static/media/ferreira.2fe39bd21b04d0c87052.jpg",
     "static/media/logo-maratona.png": "/static/media/logo-maratona.40d8c6cd20887b8265cf.png",
     "static/media/ribas.jpg": "/static/media/ribas.85986acc6e8d825f82a6.jpg",
-    "static/media/revicons.eot": "/static/media/revicons.a77de540a38981833f9e.eot",
-    "static/media/revicons.ttf": "/static/media/revicons.57fd05d4ae650374c8de.ttf",
     "static/media/logo-sbc.png": "/static/media/logo-sbc.aa7bbc204d63f49d117a.png",
     "static/media/logo-uffs.png": "/static/media/logo-uffs.a6da585588a9ff3b821e.png",
-    "static/media/revicons.woff": "/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/index.html",
-    "main.73ea0164.css.map": "/static/css/main.73ea0164.css.map",
-    "main.46030a1d.js.map": "/static/js/main.46030a1d.js.map"
+    "main.57ff607a.css.map": "/static/css/main.57ff607a.css.map",
+    "main.41652069.js.map": "/static/js/main.41652069.js.map"
   },
   "entrypoints": [
-    "static/css/main.73ea0164.css",
-    "static/js/main.46030a1d.js"
+    "static/css/main.57ff607a.css",
+    "static/js/main.41652069.js"
   ]
 }

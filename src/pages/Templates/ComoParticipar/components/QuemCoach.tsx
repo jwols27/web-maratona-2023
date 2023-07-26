@@ -1,7 +1,10 @@
-import { Box, Grid } from '@mui/material';
-import { CParagraph, CTitle } from '../../../../shared/components';
-import nerdRuivo from '../../../../shared/assets/nerd-ruivo.png';
 import React from 'react';
+
+import { Box, Grid } from '@mui/material';
+
+import { CParagraph, CTitle } from '../../../../components';
+
+import nerdRuivo from '../../../../shared/assets/nerd-ruivo.png';
 
 export const QuemCoach = () => {
     return (

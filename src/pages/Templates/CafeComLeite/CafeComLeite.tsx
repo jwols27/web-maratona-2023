@@ -1,9 +1,10 @@
 import React from 'react';
+import { useMediaQuery, useTheme } from '@mui/material';
+
+import { FadeInSection } from '../../../components';
+import { TimesCCL, Visitantes } from './components';
 
 import './cafe-com-leite.styles.css';
-import { TimesCCL, Visitantes } from './components';
-import { useMediaQuery, useTheme } from '@mui/material';
-import { FadeInSection } from '../../../shared/components';
 
 export interface CCLComponentProps {
     mediaQuery: string;

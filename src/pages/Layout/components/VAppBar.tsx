@@ -13,7 +13,7 @@ import {
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
 
-import { CSocials } from '../../../shared/components';
+import { CSocials } from '../../../components';
 import { LogoMaratonaChapeco } from '../../../shared/icons/LogoMaratonaChapeco';
 import { LogoMaratonaSBC } from '../../../shared/icons/LogoMaratonaSBC';
 

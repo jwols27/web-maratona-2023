@@ -1,18 +1,17 @@
 import React from 'react';
-import { Grid, useTheme } from '@mui/material';
+import { Grid } from '@mui/material';
 
-import { CHeader, CTitle } from '../../../shared/components';
+import { CHeader, CTitle } from '../../../components';
 import { FormeSeuTime, QuemCoach } from './components';
 
 import '../../../shared/styles/bark-box.css';
 
 export const ComoParticiparTemplate = () => {
-    const theme = useTheme();
     return (
         <div id={'como-participar'}>
             <CHeader
                 contrastText
-                boxColor={theme.palette.tertiary.main}
+                boxColor={'tertiary.main'}
                 arrow={{ width: '40px', height: '60px' }}
             >
                 <CTitle

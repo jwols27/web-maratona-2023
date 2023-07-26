@@ -1,4 +1,4 @@
-import { TNavItem } from './Layout/components';
+import React from 'react';
 import {
     BsCalendar2Fill,
     BsFillBalloonFill,
@@ -9,7 +9,8 @@ import {
 } from 'react-icons/bs';
 import { FaCoffee, FaHotel } from 'react-icons/fa';
 import { AiFillHome } from 'react-icons/ai';
-import React from 'react';
+
+import { TNavItem } from './Layout/components';
 
 export const navHome: TNavItem = {
     label: 'Início',

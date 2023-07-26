@@ -3,6 +3,7 @@ import { Box, Divider, Drawer } from '@mui/material';
 
 import { NavItem, TNavItem } from './NavItem';
 import { LogoMaratonaChapeco } from '../../../shared/icons/LogoMaratonaChapeco';
+
 import '../layout.css';
 
 interface IVDrawerProps {

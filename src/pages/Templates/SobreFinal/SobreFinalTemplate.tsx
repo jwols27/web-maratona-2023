@@ -1,17 +1,18 @@
 import React from 'react';
 import { Box, Grid } from '@mui/material';
 
-import { FinalPrincipal } from './components/FinalPrincipal';
 import {
     CBanner,
     CParagraph,
     CTextSlice,
     CTitle,
     FadeInSection
-} from '../../../shared/components';
+} from '../../../components';
+import { FinalPrincipal } from './components/FinalPrincipal';
 import { OrganizacaoGrafico } from './components/OrganizacaoGrafico';
 
 import campus from '../../../shared/assets/campus.jpg';
+
 import '../../../shared/styles/thumbnail.css';
 
 export const SobreFinalTemplate = () => {

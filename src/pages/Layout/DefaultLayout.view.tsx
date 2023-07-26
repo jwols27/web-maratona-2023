@@ -1,15 +1,14 @@
 import React from 'react';
 import { Box, useMediaQuery, useTheme } from '@mui/material';
-import { VAppBar, VDrawer, VFooter } from './components';
 import { useLocation } from 'react-router-dom';
 
+import { CBanner } from '../../components';
 import { navHome, navItems } from '../NavItems';
-import { CBanner } from '../../shared/components';
-import { FooterContent } from './components/FooterContent';
+import { useOnScreen } from '../../shared/hooks';
+import { VAppBar, VDrawer, VFooter, VFooterContent } from './components';
 
 import mainBanner from '../../shared/assets/main-banner.png';
 import mobileBanner from '../../shared/assets/small-banner.png';
-import { useOnScreen } from '../../shared/hooks';
 
 interface IDefaultLayoutProps {
     children: React.ReactNode;
@@ -78,7 +77,7 @@ const DefaultLayout: React.FC<IDefaultLayoutProps> = ({ children }) => {
 
             <Box px={{ xs: 0, xl: 10, xxl: 15 }}>{children}</Box>
             <VFooter>
-                <FooterContent />
+                <VFooterContent />
             </VFooter>
         </Box>
     );

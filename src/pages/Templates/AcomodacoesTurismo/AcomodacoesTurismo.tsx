@@ -1,12 +1,9 @@
 import React from 'react';
 import { Box, Grid, Typography } from '@mui/material';
-import {
-    CDescCard,
-    CParagraph,
-    CTitle,
-    TBalloon
-} from '../../../shared/components';
+
 import { AcomTurBalloon } from './components/AcomTurBalloon';
+import { CDescCard, CParagraph, CTitle, TBalloon } from '../../../components';
+
 import hotelLang from '../../../shared/assets/hotel/hotel-lang.webp';
 import hotelMogano from '../../../shared/assets/hotel/hotel-mogano.jpg';
 

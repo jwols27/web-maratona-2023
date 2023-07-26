@@ -1,6 +1,7 @@
 import React from 'react';
 import { Grid, GridProps, useMediaQuery, useTheme } from '@mui/material';
-import { CBalloon, TBalloon } from '../../../../shared/components';
+
+import { CBalloon, TBalloon } from '../../../../components';
 
 interface IAcomTurBalloonProps {
     balloon: TBalloon;
